@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name 24-clocks)(type Legacy)(uri ${KIPRJMOD}/24-clocks.lib)(options "")(descr ""))
+)
