@@ -6,10 +6,10 @@ OUT_DIR=Generated
 all: erc drc main_pcb
 
 erc:
-	$(KIBOT) $(DEBUG) -d $(OUT_DIR) -s run_drc -i
+	$(KIBOT) $(DEBUG) -c hardware/pcb/24-clocks.kibot.yaml -d $(OUT_DIR) -s run_drc -i
 
 drc:
-	$(KIBOT) $(DEBUG) -d $(OUT_DIR) -s run_erc -i
+	$(KIBOT) $(DEBUG) -c hardware/pcb/24-clocks.kibot.yaml -d $(OUT_DIR) -s run_erc -i
 
 main_pcb:
 	$(KIBOT) $(DEBUG) -c hardware/pcb/24-clocks.kibot.yaml -e hardware/pcb/24-clocks.sch -d $(OUT_DIR)/pcb
