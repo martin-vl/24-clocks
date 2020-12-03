@@ -6,12 +6,12 @@ on:
   push:
     paths:
       - 'hardware/pcb/*'
-      - 'Makefile'
+      - 'hardware/pcb/Makefile'
       - '.github/workflows/pcb.yml'
   pull_request:
     paths:
       - 'hardware/pcb/*'
-      - 'Makefile'
+      - 'hardware/pcb/Makefile'
       - '.github/workflows/pcb.yml'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -25,7 +25,7 @@ jobs:
 
     - name: Run ERC
       run: |
-        make erc
+        cd hardware/pcb && make erc
 
     - name: Retrieve results
       uses: actions/upload-artifact@v1
@@ -43,7 +43,7 @@ jobs:
 
     - name: Run DRC
       run: |
-        make drc
+        cd hardware/pcb && make drc
 
     - name: Retrieve results
       uses: actions/upload-artifact@v1
@@ -62,7 +62,7 @@ jobs:
 
     - name: Run schematic stuff
       run: |
-        make main_pcb
+        cd hardware/pcb && make main_pcb
 
     - name: Retrieve results
       uses: actions/upload-artifact@v1
