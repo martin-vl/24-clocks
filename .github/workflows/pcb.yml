@@ -7,12 +7,12 @@ on:
     paths:
       - 'hardware/pcb/*'
       - 'Makefile'
-      - '.github/workflows/workflow-pcb.yml'
+      - '.github/workflows/pcb.yml'
   pull_request:
     paths:
       - 'hardware/pcb/*'
       - 'Makefile'
-      - '.github/workflows/workflow-pcb.yml'
+      - '.github/workflows/pcb.yml'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
