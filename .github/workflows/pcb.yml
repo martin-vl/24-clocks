@@ -67,5 +67,5 @@ jobs:
     - name: Retrieve results
       uses: actions/upload-artifact@v1
       with:
-        name: All_Output
+        name: 24_clocks_pcb_data
         path: output
