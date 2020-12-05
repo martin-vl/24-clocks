@@ -18,41 +18,49 @@ variants:
     file_id: _VariantB
     variant: VariantB
 
-outputs:
-  # - name: 'bom_xlsx'
-  #   comment: "Spreadsheet for the Bill of Materials"
-  #   type: bom
-  #   dir: BoM
-  #   options: &bom_options
-  #     xlsx:
-  #       datasheet_as_link: MFP
-  #       title: 'KiBot variants example'
-  #       max_col_width: 40
-  #       highlight_empty: false
-  #     columns:
-  #       - Row
-  #       - References
-  #       - Quantity Per PCB
-  #       - field: Value
-  #         join: ['voltage', 'current', 'power', 'tolerance']
-  #       - field: MFN
-  #         name: Manufacturer
-  #       - field: MFP
-  #         name: Manf. Part
-  #       - Footprint
-  #     normalize_values: true
+preflight:
+  run_erc: false
+  update_xml: false
+  run_drc: false
+  check_zone_fills: false
+  ignore_unconnected: true
 
-  # - name: 'bom_html'
-  #   comment: "HTML for the Bill of Materials"
-  #   type: bom
-  #   dir: BoM
-  #   options:
-  #     <<: *bom_options
-  #     format: HTML
-  #     html:
-  #       datasheet_as_link: MFP
-  #       title: 'KiBot variants example'
-  #       highlight_empty: false
+outputs:
+
+
+  - name: schematic_pdf
+    comment: "Schematic PDF"
+    type: pdf_sch_print
+    dir: schematic
+  - name: 'bom_xlsx'
+    comment: "Spreadsheet for the Bill of Materials"
+    type: bom
+    dir: BoM
+    options: &bom_options
+      xlsx:
+        datasheet_as_link: Value
+        title: '24 Clocks BOM'
+        max_col_width: 40
+        highlight_empty: false
+      columns:
+        - Row
+        - References
+        - Value
+        - Quantity Per PCB
+        - Footprint
+      normalize_values: true
+
+  - name: 'bom_html'
+    comment: "HTML for the Bill of Materials"
+    type: bom
+    dir: BoM
+    options:
+      <<: *bom_options
+      format: HTML
+      html:
+        datasheet_as_link: MFP
+        title: 'KiBot variants example'
+        highlight_empty: false
 
   - name: ibom
     comment: 'Prototype mounting guide'
@@ -60,11 +68,6 @@ outputs:
     dir: BoM
     options:
       layer_view: F
-
-  - name: 'print_sch'
-    comment: "Schematic PDF"
-    type: pdf_sch_print
-    dir: Schematic
 
   - name: gerbers
     comment: Gerbers

@@ -4,3 +4,4 @@ hardware/**/*bak
 hardware/**/*.bck
 hardware/**/*.dcm
 hardware/**/fp-info-cache
+**/.DS_Store
