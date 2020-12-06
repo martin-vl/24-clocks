@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 7
+Sheet 2 7
 Title "24 Clocks"
 Date "2020-12-06"
 Rev "V0.x"
@@ -14,125 +14,90 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
-	6600 3850 7300 3850
+	5800 4300 6500 4300
 Wire Wire Line
-	6600 3950 7300 3950
-Text Label 7300 3850 2    50   ~ 0
+	5800 4400 6500 4400
+Text Label 6500 4300 2    50   ~ 0
 SWDIO
-Text Label 7300 3950 2    50   ~ 0
+Text Label 6500 4400 2    50   ~ 0
 SWDCLK
 Wire Wire Line
-	4800 2750 5500 2750
+	3900 1900 4600 1900
 Wire Wire Line
-	4800 2550 5500 2550
-Text Label 4800 2550 0    50   ~ 0
+	3900 1700 4600 1700
+Text Label 3900 1700 0    50   ~ 0
 uC-RST
-Text Label 4800 2750 0    50   ~ 0
+Text Label 3900 1900 0    50   ~ 0
 BOOT0
 $Comp
 L power:+3V3 #PWR?
 U 1 1 5FDEDBF8
-P 6050 2200
+P 5250 1400
 AR Path="/5FDEDBF8" Ref="#PWR?"  Part="1" 
 AR Path="/5FDEAABE/5FDEDBF8" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 6050 2050 50  0001 C CNN
-F 1 "+3V3" H 6065 2373 50  0000 C CNN
-F 2 "" H 6050 2200 50  0001 C CNN
-F 3 "" H 6050 2200 50  0001 C CNN
-	1    6050 2200
+F 0 "#PWR?" H 5250 1250 50  0001 C CNN
+F 1 "+3V3" H 5265 1573 50  0000 C CNN
+F 2 "" H 5250 1400 50  0001 C CNN
+F 3 "" H 5250 1400 50  0001 C CNN
+	1    5250 1400
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5FDEDBFE
-P 6050 4350
+P 5250 4800
 AR Path="/5FDEDBFE" Ref="#PWR?"  Part="1" 
 AR Path="/5FDEAABE/5FDEDBFE" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 6050 4100 50  0001 C CNN
-F 1 "GND" H 6055 4177 50  0000 C CNN
-F 2 "" H 6050 4350 50  0001 C CNN
-F 3 "" H 6050 4350 50  0001 C CNN
-	1    6050 4350
+F 0 "#PWR?" H 5250 4550 50  0001 C CNN
+F 1 "GND" H 5255 4627 50  0000 C CNN
+F 2 "" H 5250 4800 50  0001 C CNN
+F 3 "" H 5250 4800 50  0001 C CNN
+	1    5250 4800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6050 2200 6050 2300
-Wire Wire Line
-	6050 2300 6000 2300
-Wire Wire Line
-	6000 2300 6000 2350
-Wire Wire Line
-	6100 2350 6100 2300
-Wire Wire Line
-	6100 2300 6050 2300
-Connection ~ 6050 2300
 $Comp
 L Device:C C?
 U 1 1 5FDEDC0A
-P 5600 4650
+P 4400 6500
 AR Path="/5FDEDC0A" Ref="C?"  Part="1" 
 AR Path="/5FDEAABE/5FDEDC0A" Ref="C?"  Part="1" 
-F 0 "C?" H 5715 4696 50  0000 L CNN
-F 1 "100nF" H 5715 4605 50  0000 L CNN
-F 2 "C0603" H 5638 4500 50  0001 C CNN
-F 3 "~" H 5600 4650 50  0001 C CNN
-	1    5600 4650
+F 0 "C?" H 4515 6546 50  0000 L CNN
+F 1 "100nF" H 4515 6455 50  0000 L CNN
+F 2 "C0603" H 4438 6350 50  0001 C CNN
+F 3 "~" H 4400 6500 50  0001 C CNN
+	1    4400 6500
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5FDEDC10
-P 5600 4850
+P 4400 6800
 AR Path="/5FDEDC10" Ref="#PWR?"  Part="1" 
 AR Path="/5FDEAABE/5FDEDC10" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5600 4600 50  0001 C CNN
-F 1 "GND" H 5605 4677 50  0000 C CNN
-F 2 "" H 5600 4850 50  0001 C CNN
-F 3 "" H 5600 4850 50  0001 C CNN
-	1    5600 4850
+F 0 "#PWR?" H 4400 6550 50  0001 C CNN
+F 1 "GND" H 4405 6627 50  0000 C CNN
+F 2 "" H 4400 6800 50  0001 C CNN
+F 3 "" H 4400 6800 50  0001 C CNN
+	1    4400 6800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR?
 U 1 1 5FDEDC16
-P 5600 4450
+P 4400 6200
 AR Path="/5FDEDC16" Ref="#PWR?"  Part="1" 
 AR Path="/5FDEAABE/5FDEDC16" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5600 4300 50  0001 C CNN
-F 1 "+3V3" H 5615 4623 50  0000 C CNN
-F 2 "" H 5600 4450 50  0001 C CNN
-F 3 "" H 5600 4450 50  0001 C CNN
-	1    5600 4450
+F 0 "#PWR?" H 4400 6050 50  0001 C CNN
+F 1 "+3V3" H 4415 6373 50  0000 C CNN
+F 2 "" H 4400 6200 50  0001 C CNN
+F 3 "" H 4400 6200 50  0001 C CNN
+	1    4400 6200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5600 4450 5600 4500
+	4400 6300 4400 6350
 Wire Wire Line
-	5600 4800 5600 4850
-$Comp
-L MCU_ST_STM32L0:STM32L031K6Tx U?
-U 1 1 5FDEDC1E
-P 6100 3250
-AR Path="/5FDEDC1E" Ref="U?"  Part="1" 
-AR Path="/5FDEAABE/5FDEDC1E" Ref="U?"  Part="1" 
-F 0 "U?" H 5650 4150 50  0000 C CNN
-F 1 "STM32L031K6Tx" H 6500 2250 50  0000 C CNN
-F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 5600 2350 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00140359.pdf" H 6100 3250 50  0001 C CNN
-	1    6100 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6000 4250 6000 4300
-Wire Wire Line
-	6000 4300 6050 4300
-Wire Wire Line
-	6100 4300 6100 4250
-Wire Wire Line
-	6050 4300 6050 4350
-Connection ~ 6050 4300
-Wire Wire Line
-	6050 4300 6100 4300
+	4400 6650 4400 6700
 $Comp
 L Connector_Generic:Conn_02x04_Odd_Even J?
 U 1 1 5FDEF68E
@@ -320,4 +285,206 @@ Wire Wire Line
 	8800 3600 9400 3600
 Wire Wire Line
 	8800 3750 9400 3750
+$Comp
+L MCU_ST_STM32L1:STM32L151C8Tx U?
+U 1 1 5FCD10ED
+P 5200 3100
+F 0 "U?" H 4800 4700 50  0000 C CNN
+F 1 "STM32L151C8T6" H 5750 1500 50  0000 C CNN
+F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 4700 1600 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00277537.pdf" H 5200 3100 50  0001 C CNN
+	1    5200 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 1500 5100 1450
+Wire Wire Line
+	5100 1450 5200 1450
+Wire Wire Line
+	5400 1450 5400 1500
+Wire Wire Line
+	5250 1400 5250 1450
+Connection ~ 5250 1450
+Wire Wire Line
+	5250 1450 5300 1450
+Wire Wire Line
+	5200 1500 5200 1450
+Connection ~ 5200 1450
+Wire Wire Line
+	5200 1450 5250 1450
+Wire Wire Line
+	5300 1500 5300 1450
+Connection ~ 5300 1450
+Wire Wire Line
+	5300 1450 5400 1450
+Wire Wire Line
+	5400 4700 5400 4750
+Wire Wire Line
+	5400 4750 5300 4750
+Wire Wire Line
+	5100 4750 5100 4700
+Wire Wire Line
+	5200 4700 5200 4750
+Connection ~ 5200 4750
+Wire Wire Line
+	5200 4750 5100 4750
+Wire Wire Line
+	5300 4700 5300 4750
+Connection ~ 5300 4750
+Wire Wire Line
+	5300 4750 5250 4750
+Wire Wire Line
+	5250 4800 5250 4750
+Connection ~ 5250 4750
+Wire Wire Line
+	5250 4750 5200 4750
+Text Label 6400 3400 2    50   ~ 0
+M-Rst
+Text Label 6400 3700 2    50   ~ 0
+M-A-CW
+Text Label 6400 3500 2    50   ~ 0
+M-A-Step
+Text Label 4000 3000 0    50   ~ 0
+M-B-CW
+Text Label 6400 3600 2    50   ~ 0
+M-B-Step
+Text Label 4000 3100 0    50   ~ 0
+HAL-A
+Text Label 4000 3200 0    50   ~ 0
+HAL-B
+Text Label 6400 3300 2    50   ~ 0
+uC-RS485-Rx
+Text Label 6400 3200 2    50   ~ 0
+uC-RS485-Tx
+Text Label 6400 3100 2    50   ~ 0
+uC-RS485-DE
+Text Label 4000 4100 0    50   ~ 0
+uC-WiFi-Rx
+Text Label 4000 4000 0    50   ~ 0
+uC-WiFi-Tx
+Text Label 4000 3600 0    50   ~ 0
+I2C-SCL
+Text Label 4000 3700 0    50   ~ 0
+I2C-SDA
+Wire Wire Line
+	6400 3400 5800 3400
+Wire Wire Line
+	6400 3700 5800 3700
+Wire Wire Line
+	6400 3500 5800 3500
+Wire Wire Line
+	4000 3000 4600 3000
+Wire Wire Line
+	6400 3600 5800 3600
+Wire Wire Line
+	4000 3100 4600 3100
+Wire Wire Line
+	4000 3200 4600 3200
+Wire Wire Line
+	6400 3300 5800 3300
+Wire Wire Line
+	6400 3200 5800 3200
+Wire Wire Line
+	6400 3100 5800 3100
+Wire Wire Line
+	4000 4100 4600 4100
+Wire Wire Line
+	4000 4000 4600 4000
+Wire Wire Line
+	4000 3600 4600 3600
+Wire Wire Line
+	4000 3700 4600 3700
+$Comp
+L Device:C C?
+U 1 1 5FCE8A85
+P 4900 6500
+AR Path="/5FCE8A85" Ref="C?"  Part="1" 
+AR Path="/5FDEAABE/5FCE8A85" Ref="C?"  Part="1" 
+F 0 "C?" H 5015 6546 50  0000 L CNN
+F 1 "100nF" H 5015 6455 50  0000 L CNN
+F 2 "C0603" H 4938 6350 50  0001 C CNN
+F 3 "~" H 4900 6500 50  0001 C CNN
+	1    4900 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FCEA1E4
+P 5400 6500
+AR Path="/5FCEA1E4" Ref="C?"  Part="1" 
+AR Path="/5FDEAABE/5FCEA1E4" Ref="C?"  Part="1" 
+F 0 "C?" H 5515 6546 50  0000 L CNN
+F 1 "100nF" H 5515 6455 50  0000 L CNN
+F 2 "C0603" H 5438 6350 50  0001 C CNN
+F 3 "~" H 5400 6500 50  0001 C CNN
+	1    5400 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FCEB9CD
+P 5900 6500
+AR Path="/5FCEB9CD" Ref="C?"  Part="1" 
+AR Path="/5FDEAABE/5FCEB9CD" Ref="C?"  Part="1" 
+F 0 "C?" H 6015 6546 50  0000 L CNN
+F 1 "100nF" H 6015 6455 50  0000 L CNN
+F 2 "C0603" H 5938 6350 50  0001 C CNN
+F 3 "~" H 5900 6500 50  0001 C CNN
+	1    5900 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 6650 5900 6700
+Wire Wire Line
+	5900 6700 5400 6700
+Wire Wire Line
+	4400 6800 4400 6700
+Connection ~ 4400 6700
+Wire Wire Line
+	4400 6300 4900 6300
+Wire Wire Line
+	5900 6300 5900 6350
+Wire Wire Line
+	4400 6200 4400 6300
+Connection ~ 4400 6300
+Wire Wire Line
+	4900 6350 4900 6300
+Connection ~ 4900 6300
+Wire Wire Line
+	4900 6300 5400 6300
+Wire Wire Line
+	5400 6300 5400 6350
+Connection ~ 5400 6300
+Wire Wire Line
+	5400 6300 5900 6300
+Wire Wire Line
+	5400 6650 5400 6700
+Connection ~ 5400 6700
+Wire Wire Line
+	5400 6700 4900 6700
+Wire Wire Line
+	4900 6650 4900 6700
+Connection ~ 4900 6700
+Wire Wire Line
+	4900 6700 4400 6700
+Text Label 6400 4000 2    50   ~ 0
+uC-Debug-Rx
+Text Label 6400 3900 2    50   ~ 0
+uC-Debug-Tx
+Wire Wire Line
+	6400 4000 5800 4000
+Wire Wire Line
+	6400 3900 5800 3900
+Text Label 9950 5450 2    50   ~ 0
+uC-Debug-Rx
+Text Label 9950 5600 2    50   ~ 0
+uC-Debug-Tx
+Wire Wire Line
+	9950 5450 9350 5450
+Wire Wire Line
+	9950 5600 9350 5600
+Text Notes 8150 6000 0    118  ~ 0
+Add connector for Debug UART
+Text Notes 4900 7050 0    118  ~ 0
+Check caps
 $EndSCHEMATC
