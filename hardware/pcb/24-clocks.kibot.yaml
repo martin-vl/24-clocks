@@ -9,14 +9,14 @@ variants:
   - name: 'MASTER'
     comment: 'Master PCBA'
     type: kibom
-    file_id: _MASTER
+    file_id: _master
     variant: MASTER
 
   - name: 'SLAVE'
     comment: 'Slave'
     type: kibom
-    file_id: _Slave
-    variant: Slave
+    file_id: _slave
+    variant: SLAVE
 
 preflight:
   run_erc: false
