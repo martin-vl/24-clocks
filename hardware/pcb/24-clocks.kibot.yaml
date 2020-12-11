@@ -6,17 +6,17 @@ variants:
     comment: 'Default PCB'
     type: kibom
 
-  - name: 'VARA'
-    comment: 'Variant A'
+  - name: 'MASTER'
+    comment: 'Master PCBA'
     type: kibom
-    file_id: _VARA
-    variant: VARA
+    file_id: _MASTER
+    variant: MASTER
 
-  - name: 'VariantB'
-    comment: 'Variant B'
+  - name: 'SLAVE'
+    comment: 'Slave'
     type: kibom
-    file_id: _VariantB
-    variant: VariantB
+    file_id: _Slave
+    variant: Slave
 
 preflight:
   run_erc: false
