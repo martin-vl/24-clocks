@@ -62,7 +62,7 @@ jobs:
 
     - name: Run schematic stuff
       run: |
-        cd hardware/pcb && make main_pcb
+        cd hardware/pcb && make pcb_main pcba_master pcba_slave
 
     - name: Retrieve results
       uses: actions/upload-artifact@v1

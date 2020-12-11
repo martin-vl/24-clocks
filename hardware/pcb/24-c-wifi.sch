@@ -1,0 +1,316 @@
+EESchema Schematic File Version 4
+LIBS:24-clocks-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 7
+Title "24 Clocks"
+Date "2020-12-06"
+Rev "V0.x"
+Comp "Martin van Leussen"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 24-clocks:ESP32-WROOM-32D U?
+U 1 1 5FDA8E5C
+P 6000 4150
+AR Path="/5FDA8E5C" Ref="U?"  Part="1" 
+AR Path="/5FDA43A0/5FDA8E5C" Ref="U601"  Part="1" 
+F 0 "U601" H 5600 5550 50  0000 C CNN
+F 1 "ESP32-WROOM-32D" H 6500 2750 50  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 6000 2650 50  0001 C CNN
+F 3 "" H 5700 4200 50  0001 C CNN
+F 4 "-SLAVE" H 6000 4150 50  0001 C CNN "Config"
+	1    6000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5FDA8E62
+P 5300 2550
+AR Path="/5FDA8E62" Ref="#PWR?"  Part="1" 
+AR Path="/5FDA43A0/5FDA8E62" Ref="#PWR0604"  Part="1" 
+F 0 "#PWR0604" H 5300 2400 50  0001 C CNN
+F 1 "+3V3" H 5315 2723 50  0000 C CNN
+F 2 "" H 5300 2550 50  0001 C CNN
+F 3 "" H 5300 2550 50  0001 C CNN
+	1    5300 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FDA8E68
+P 5300 2750
+AR Path="/5FDA8E68" Ref="R?"  Part="1" 
+AR Path="/5FDA43A0/5FDA8E68" Ref="R601"  Part="1" 
+F 0 "R601" H 5370 2796 50  0000 L CNN
+F 1 "10k" H 5370 2705 50  0000 L CNN
+F 2 "R0603" V 5230 2750 50  0001 C CNN
+F 3 "~" H 5300 2750 50  0001 C CNN
+F 4 "-SLAVE" H 5300 2750 50  0001 C CNN "Config"
+	1    5300 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2550 5300 2600
+Wire Wire Line
+	5400 2950 5300 2950
+Wire Wire Line
+	5300 2900 5300 2950
+Connection ~ 5300 2950
+Wire Wire Line
+	5300 2950 4850 2950
+Text Label 4850 2950 0    50   ~ 0
+ESP-EN
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5FDA8E74
+P 6700 2550
+AR Path="/5FDA8E74" Ref="#PWR?"  Part="1" 
+AR Path="/5FDA43A0/5FDA8E74" Ref="#PWR0605"  Part="1" 
+F 0 "#PWR0605" H 6700 2400 50  0001 C CNN
+F 1 "+3V3" H 6715 2723 50  0000 C CNN
+F 2 "" H 6700 2550 50  0001 C CNN
+F 3 "" H 6700 2550 50  0001 C CNN
+	1    6700 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FDA8E7A
+P 6700 2750
+AR Path="/5FDA8E7A" Ref="R?"  Part="1" 
+AR Path="/5FDA43A0/5FDA8E7A" Ref="R602"  Part="1" 
+F 0 "R602" H 6770 2796 50  0000 L CNN
+F 1 "10k" H 6770 2705 50  0000 L CNN
+F 2 "R0603" V 6630 2750 50  0001 C CNN
+F 3 "~" H 6700 2750 50  0001 C CNN
+F 4 "-SLAVE" H 6700 2750 50  0001 C CNN "Config"
+	1    6700 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 2550 6700 2600
+Wire Wire Line
+	6600 2950 6700 2950
+Wire Wire Line
+	6600 3050 7150 3050
+Wire Wire Line
+	6600 3250 7150 3250
+Wire Wire Line
+	6600 3950 7150 3950
+Wire Wire Line
+	6600 4050 7150 4050
+Wire Wire Line
+	6700 2900 6700 2950
+Connection ~ 6700 2950
+Wire Wire Line
+	6700 2950 7150 2950
+Text Label 7150 2950 2    50   ~ 0
+ESP-IO0
+Text Label 7150 3050 2    50   ~ 0
+ESP-TxD0
+Text Label 7150 3250 2    50   ~ 0
+ESP-RxD0
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5FDA8E8C
+P 4900 1650
+AR Path="/5FDA8E8C" Ref="#PWR?"  Part="1" 
+AR Path="/5FDA43A0/5FDA8E8C" Ref="#PWR0601"  Part="1" 
+F 0 "#PWR0601" H 4900 1500 50  0001 C CNN
+F 1 "+3V3" H 4915 1823 50  0000 C CNN
+F 2 "" H 4900 1650 50  0001 C CNN
+F 3 "" H 4900 1650 50  0001 C CNN
+	1    4900 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FDA8E92
+P 6000 5600
+AR Path="/5FDA8E92" Ref="#PWR?"  Part="1" 
+AR Path="/5FDA43A0/5FDA8E92" Ref="#PWR0608"  Part="1" 
+F 0 "#PWR0608" H 6000 5350 50  0001 C CNN
+F 1 "GND" H 6005 5427 50  0000 C CNN
+F 2 "" H 6000 5600 50  0001 C CNN
+F 3 "" H 6000 5600 50  0001 C CNN
+	1    6000 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 5550 6000 5600
+$Comp
+L Device:C C?
+U 1 1 5FDA8E99
+P 5600 1900
+AR Path="/5FDA8E99" Ref="C?"  Part="1" 
+AR Path="/5FDA43A0/5FDA8E99" Ref="C602"  Part="1" 
+F 0 "C602" H 5715 1946 50  0000 L CNN
+F 1 "100nF" H 5715 1855 50  0000 L CNN
+F 2 "C0603" H 5638 1750 50  0001 C CNN
+F 3 "~" H 5600 1900 50  0001 C CNN
+F 4 "-SLAVE" H 5600 1900 50  0001 C CNN "Config"
+	1    5600 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FDA8E9F
+P 5600 2100
+AR Path="/5FDA8E9F" Ref="#PWR?"  Part="1" 
+AR Path="/5FDA43A0/5FDA8E9F" Ref="#PWR0603"  Part="1" 
+F 0 "#PWR0603" H 5600 1850 50  0001 C CNN
+F 1 "GND" H 5605 1927 50  0000 C CNN
+F 2 "" H 5600 2100 50  0001 C CNN
+F 3 "" H 5600 2100 50  0001 C CNN
+	1    5600 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2050 5600 2100
+$Comp
+L power:GND #PWR?
+U 1 1 5FDA8EA6
+P 5150 2100
+AR Path="/5FDA8EA6" Ref="#PWR?"  Part="1" 
+AR Path="/5FDA43A0/5FDA8EA6" Ref="#PWR0602"  Part="1" 
+F 0 "#PWR0602" H 5150 1850 50  0001 C CNN
+F 1 "GND" H 5155 1927 50  0000 C CNN
+F 2 "" H 5150 2100 50  0001 C CNN
+F 3 "" H 5150 2100 50  0001 C CNN
+	1    5150 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5FDA8EAC
+P 5150 1900
+AR Path="/5FDA8EAC" Ref="C?"  Part="1" 
+AR Path="/5FDA43A0/5FDA8EAC" Ref="C601"  Part="1" 
+F 0 "C601" H 5268 1946 50  0000 L CNN
+F 1 "22uF" H 5268 1855 50  0000 L CNN
+F 2 "" H 5188 1750 50  0001 C CNN
+F 3 "~" H 5150 1900 50  0001 C CNN
+F 4 "-SLAVE" H 5150 1900 50  0001 C CNN "Config"
+	1    5150 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 2050 5150 2100
+Wire Wire Line
+	4900 1650 4900 1700
+Wire Wire Line
+	4900 1700 5150 1700
+Wire Wire Line
+	5600 1750 5600 1700
+Connection ~ 5600 1700
+Wire Wire Line
+	5600 1700 6000 1700
+Wire Wire Line
+	5150 1750 5150 1700
+Connection ~ 5150 1700
+Wire Wire Line
+	5150 1700 5600 1700
+Wire Wire Line
+	6000 1700 6000 2750
+Text Label 7150 3950 2    50   ~ 0
+uC-WiFi-Tx
+Text Label 7150 4050 2    50   ~ 0
+uC-WiFi-Rx
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J?
+U 1 1 5FDADE19
+P 8950 2750
+AR Path="/5FDADE19" Ref="J?"  Part="1" 
+AR Path="/5FDA43A0/5FDADE19" Ref="J601"  Part="1" 
+F 0 "J601" H 9000 2975 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 9000 2976 50  0001 C CNN
+F 2 "" H 8950 2750 50  0001 C CNN
+F 3 "~" H 8950 2750 50  0001 C CNN
+F 4 "-SLAVE" H 8950 2750 50  0001 C CNN "Config"
+	1    8950 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 2650 8350 2650
+Wire Wire Line
+	8750 2750 8350 2750
+Wire Wire Line
+	8750 2850 8350 2850
+Wire Wire Line
+	9650 2850 9250 2850
+Text Label 8350 2650 0    50   ~ 0
+ESP-EN
+Text Label 8350 2750 0    50   ~ 0
+ESP-TxD0
+Text Label 8350 2850 0    50   ~ 0
+ESP-RxD0
+Text Label 9650 2850 2    50   ~ 0
+ESP-IO0
+$Comp
+L power:GND #PWR?
+U 1 1 5FDADE27
+P 9700 2900
+AR Path="/5FDADE27" Ref="#PWR?"  Part="1" 
+AR Path="/5FDA43A0/5FDADE27" Ref="#PWR0607"  Part="1" 
+F 0 "#PWR0607" H 9700 2650 50  0001 C CNN
+F 1 "GND" H 9705 2727 50  0000 C CNN
+F 2 "" H 9700 2900 50  0001 C CNN
+F 3 "" H 9700 2900 50  0001 C CNN
+	1    9700 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5FDADE2D
+P 9700 2600
+AR Path="/5FDADE2D" Ref="#PWR?"  Part="1" 
+AR Path="/5FDA43A0/5FDADE2D" Ref="#PWR0606"  Part="1" 
+F 0 "#PWR0606" H 9700 2450 50  0001 C CNN
+F 1 "+3V3" H 9715 2773 50  0000 C CNN
+F 2 "" H 9700 2600 50  0001 C CNN
+F 3 "" H 9700 2600 50  0001 C CNN
+	1    9700 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 2600 9700 2650
+Wire Wire Line
+	9250 2650 9400 2650
+Wire Wire Line
+	9700 2750 9700 2900
+Wire Wire Line
+	9250 2750 9700 2750
+$Comp
+L Device:Jumper_NC_Small JP?
+U 1 1 5FDADE37
+P 9500 2650
+AR Path="/5FDADE37" Ref="JP?"  Part="1" 
+AR Path="/5FDA43A0/5FDADE37" Ref="JP601"  Part="1" 
+F 0 "JP601" H 9500 2771 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 9500 2771 50  0001 C CNN
+F 2 "" H 9500 2650 50  0001 C CNN
+F 3 "~" H 9500 2650 50  0001 C CNN
+	1    9500 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 2650 9700 2650
+Text HLabel 2150 2350 0    50   Input ~ 0
+uC-WiFi-Tx
+Text HLabel 2150 2500 0    50   Output ~ 0
+uC-WiFi-Rx
+Wire Wire Line
+	2150 2350 2950 2350
+Wire Wire Line
+	2150 2500 2950 2500
+Text Label 2950 2350 2    50   ~ 0
+uC-WiFi-Tx
+Text Label 2950 2500 2    50   ~ 0
+uC-WiFi-Rx
+$EndSCHEMATC

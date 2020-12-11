@@ -3,7 +3,7 @@ KIBOT=kibot
 DEBUG=
 OUT_DIR=../../output
 
-all: erc drc main_pcb
+all: erc drc pcb_main
 
 erc:
 #	$(KIBOT) $(DEBUG) -d $(OUT_DIR) -s run_drc -i
@@ -11,9 +11,13 @@ erc:
 drc:
 #	$(KIBOT) $(DEBUG) -d $(OUT_DIR) -s run_erc -i
 
-main_pcb:
+pcb_main:
 	$(KIBOT) $(DEBUG) -c 24-clocks.kibot.yaml -e 24-clocks.sch -d $(OUT_DIR)/pcb schematic_pdf
-	#$(KIBOT) $(DEBUG) -c 24-clocks.kibot.yaml -e 24-clocks.sch -d $(OUT_DIR)/pcba_master -g variant=MASTER schematic_pdf
-	#$(KIBOT) $(DEBUG) -c 24-clocks.kibot.yaml -e 24-clocks.sch -d $(OUT_DIR)/pcba_slave -g variant=SLAVE schematic_pdf
 
-.PHONY: main_pcb erc drc
+pcba_master:
+	$(KIBOT) $(DEBUG) -c 24-clocks.kibot.yaml -e 24-clocks.sch -d $(OUT_DIR)/pcba_master -g variant=MASTER schematic_pdf
+
+pcba_slave:
+	$(KIBOT) $(DEBUG) -c 24-clocks.kibot.yaml -e 24-clocks.sch -d $(OUT_DIR)/pcba_slave -g variant=SLAVE schematic_pdf
+
+.PHONY: pcb_main erc drc
