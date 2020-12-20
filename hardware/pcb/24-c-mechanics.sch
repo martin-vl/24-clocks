@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:24-clocks-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -23,7 +22,7 @@ AR Path="/5FCDA719/5FCE4F17" Ref="U302"  Part="1"
 F 0 "U302" H 6775 3165 50  0000 C CNN
 F 1 "VID66-08" H 6775 3074 50  0000 C CNN
 F 2 "TSOP-20" H 6250 2000 50  0001 C CNN
-F 3 "" H 6250 2000 50  0001 C CNN
+F 3 "http://www.vidmotion.com.cn/UploadFile/down/2009111391710_VID6608%20manual%20060927.pdf" H 6250 2000 50  0001 C CNN
 F 4 "-MASTER" H 6800 2300 50  0001 C CNN "Config"
 	1    6800 2300
 	1    0    0    -1  

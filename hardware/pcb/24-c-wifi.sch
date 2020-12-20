@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:24-clocks-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -313,4 +312,31 @@ Text Label 2950 2350 2    50   ~ 0
 uC-WiFi-Tx
 Text Label 2950 2500 2    50   ~ 0
 uC-WiFi-Rx
+NoConn ~ 6600 5250
+NoConn ~ 6600 5150
+NoConn ~ 6600 5050
+NoConn ~ 6600 4950
+NoConn ~ 6600 4850
+NoConn ~ 6600 4750
+NoConn ~ 6600 4650
+NoConn ~ 6600 4550
+NoConn ~ 6600 4450
+NoConn ~ 6600 4350
+NoConn ~ 6600 4250
+NoConn ~ 6600 4150
+NoConn ~ 6600 3850
+NoConn ~ 6600 3750
+NoConn ~ 6600 3650
+NoConn ~ 6600 3550
+NoConn ~ 6600 3450
+NoConn ~ 6600 3350
+NoConn ~ 6600 3150
+NoConn ~ 5400 4150
+NoConn ~ 5400 4250
+NoConn ~ 5400 4350
+NoConn ~ 5400 4450
+NoConn ~ 5400 4550
+NoConn ~ 5400 4650
+NoConn ~ 5400 3250
+NoConn ~ 5400 3150
 $EndSCHEMATC

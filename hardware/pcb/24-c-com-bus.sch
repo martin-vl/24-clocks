@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:24-clocks-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -270,4 +269,6 @@ Text Label 3000 2450 2    50   ~ 0
 uC-RS485-Tx
 Text Label 3000 2550 2    50   ~ 0
 uC-RS485-DE
+Wire Wire Line
+	5650 2450 5650 2400
 $EndSCHEMATC
