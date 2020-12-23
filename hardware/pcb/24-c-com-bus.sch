@@ -27,12 +27,6 @@ F 3 "https://datasheets.maximintegrated.com/en/ds/MAX3483-MAX3491.pdf" H 5650 30
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4550 2850 5250 2850
-Wire Wire Line
-	4550 3000 5250 3000
-Wire Wire Line
-	4550 3150 5250 3150
-Wire Wire Line
 	5250 3050 5250 3000
 Connection ~ 5250 3000
 Wire Wire Line
@@ -271,4 +265,43 @@ Text Label 3000 2550 2    50   ~ 0
 uC-RS485-DE
 Wire Wire Line
 	5650 2450 5650 2400
+$Comp
+L Connector:TestPoint TP401
+U 1 1 5FFCAC49
+P 4450 2850
+F 0 "TP401" V 4450 3050 50  0000 L CNN
+F 1 "uC-RS485-Rx" V 4554 2922 50  0001 C CNN
+F 2 "" H 4650 2850 50  0001 C CNN
+F 3 "~" H 4650 2850 50  0001 C CNN
+	1    4450 2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP402
+U 1 1 5FFCBD49
+P 4450 3000
+F 0 "TP402" V 4450 3200 50  0000 L CNN
+F 1 "uC-RS485-DE" V 4554 3072 50  0001 C CNN
+F 2 "" H 4650 3000 50  0001 C CNN
+F 3 "~" H 4650 3000 50  0001 C CNN
+	1    4450 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP403
+U 1 1 5FFCBF72
+P 4450 3150
+F 0 "TP403" V 4450 3350 50  0000 L CNN
+F 1 "uC-RS485-Tx" V 4554 3222 50  0001 C CNN
+F 2 "" H 4650 3150 50  0001 C CNN
+F 3 "~" H 4650 3150 50  0001 C CNN
+	1    4450 3150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4450 2850 5250 2850
+Wire Wire Line
+	4450 3000 5250 3000
+Wire Wire Line
+	4450 3150 5250 3150
 $EndSCHEMATC
