@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:24-clocks-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -261,4 +262,13 @@ F 3 "" H 4200 3600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4200 3600 4200 3550
+Wire Wire Line
+	4450 2800 4450 2850
+Connection ~ 4450 2850
+Wire Wire Line
+	6250 2800 6250 2850
+Connection ~ 6250 2850
+Wire Wire Line
+	7900 2800 7900 2850
+Connection ~ 7900 2850
 $EndSCHEMATC
