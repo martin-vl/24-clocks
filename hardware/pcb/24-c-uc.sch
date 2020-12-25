@@ -539,17 +539,6 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Crystal Y201
-U 1 1 5FE61E24
-P 4000 2350
-F 0 "Y201" V 3954 2481 50  0000 L CNN
-F 1 "8MHz" V 4045 2481 50  0000 L CNN
-F 2 "" H 4000 2350 50  0001 C CNN
-F 3 "~" H 4000 2350 50  0001 C CNN
-	1    4000 2350
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:C C205
 U 1 1 5FE6323A
 P 3800 2150
@@ -574,7 +563,7 @@ $EndComp
 Wire Wire Line
 	3650 2150 3600 2150
 Wire Wire Line
-	3600 2150 3600 2550
+	3600 2150 3600 2350
 Wire Wire Line
 	3600 2550 3650 2550
 Wire Wire Line
@@ -589,13 +578,9 @@ Wire Wire Line
 	4600 2300 4600 2150
 Wire Wire Line
 	4600 2150 4000 2150
-Wire Wire Line
-	4000 2200 4000 2150
 Connection ~ 4000 2150
 Wire Wire Line
 	4000 2150 3950 2150
-Wire Wire Line
-	4000 2500 4000 2550
 Connection ~ 4000 2550
 Wire Wire Line
 	4000 2550 4600 2550
@@ -1034,4 +1019,39 @@ Wire Wire Line
 	2100 6500 2100 6600
 Wire Wire Line
 	1400 6600 2100 6600
+$Comp
+L Device:Crystal_GND23_Small Y201
+U 1 1 5FE749A7
+P 4000 2350
+F 0 "Y201" V 3954 2494 50  0000 L CNN
+F 1 "8MHz" V 4045 2494 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_5032-4Pin_5.0x3.2mm" H 4000 2350 50  0001 C CNN
+F 3 "~" H 4000 2350 50  0001 C CNN
+	1    4000 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 2150 4000 2250
+Wire Wire Line
+	4000 2450 4000 2550
+Wire Wire Line
+	3900 2350 3600 2350
+Connection ~ 3600 2350
+Wire Wire Line
+	3600 2350 3600 2550
+$Comp
+L power:GND #PWR?
+U 1 1 5FE85E24
+P 4100 2600
+AR Path="/5FE85E24" Ref="#PWR?"  Part="1" 
+AR Path="/5FDEAABE/5FE85E24" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4100 2350 50  0001 C CNN
+F 1 "GND" H 4105 2427 50  0000 C CNN
+F 2 "" H 4100 2600 50  0001 C CNN
+F 3 "" H 4100 2600 50  0001 C CNN
+	1    4100 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2600 4100 2350
 $EndSCHEMATC

@@ -157,22 +157,6 @@ F 4 "-SLAVE" H 6000 5150 50  0001 C CNN "Config"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5200 5200 5200 5150
-Wire Wire Line
-	5200 5150 5400 5150
-Wire Wire Line
-	5400 5150 5400 5250
-Wire Wire Line
-	5400 5250 5500 5250
-Wire Wire Line
-	5200 5400 5200 5450
-Wire Wire Line
-	5200 5450 5400 5450
-Wire Wire Line
-	5400 5450 5400 5350
-Wire Wire Line
-	5400 5350 5500 5350
-Wire Wire Line
 	5500 5050 4750 5050
 Wire Wire Line
 	5500 4950 4750 4950
@@ -342,21 +326,6 @@ Wire Wire Line
 Wire Wire Line
 	6600 4850 6600 4950
 $Comp
-L 24-clocks-rescue:CRYSTAL-32.768KHZSMD-3.2X1.5-SparkFun-Clocks Y701
-U 1 1 5FD418B6
-P 5200 5300
-AR Path="/5FD418B6" Ref="Y701"  Part="1" 
-AR Path="/5FDBDABC/5FD418B6" Ref="Y701"  Part="1" 
-F 0 "Y701" V 5100 5200 45  0000 R CNN
-F 1 "CRYSTAL-32.768KHZSMD-3.2X1.5" V 5200 5200 45  0000 R CNN
-F 2 "" H 5200 5500 20  0001 C CNN
-F 3 "" H 5200 5300 50  0001 C CNN
-F 4 "XTAL-13062" V 5300 5200 60  0000 R CNN "Field4"
-F 5 "-SLAVE" H 5200 5300 50  0001 C CNN "Config"
-	1    5200 5300
-	0    1    1    0   
-$EndComp
-$Comp
 L Connector:TestPoint TP701
 U 1 1 5FF95498
 P 3850 1000
@@ -396,4 +365,57 @@ $EndComp
 Wire Wire Line
 	6600 4400 6600 4450
 Connection ~ 6600 4450
+$Comp
+L Device:Crystal_GND23_Small Y701
+U 1 1 5FE6F3FD
+P 5200 5300
+F 0 "Y701" V 5150 5150 50  0000 R CNN
+F 1 "32.768kHz" V 5250 5150 50  0000 R CNN
+F 2 "Crystal:Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm" H 5200 5300 50  0001 C CNN
+F 3 "~" H 5200 5300 50  0001 C CNN
+	1    5200 5300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 5200 5200 5150
+Wire Wire Line
+	5200 5150 5400 5150
+Wire Wire Line
+	5400 5150 5400 5250
+Wire Wire Line
+	5400 5250 5500 5250
+Wire Wire Line
+	5500 5350 5400 5350
+Wire Wire Line
+	5400 5350 5400 5450
+Wire Wire Line
+	5400 5450 5200 5450
+Wire Wire Line
+	5200 5450 5200 5400
+$Comp
+L power:GND #PWR?
+U 1 1 5FE8D112
+P 5200 5600
+F 0 "#PWR?" H 5200 5350 50  0001 C CNN
+F 1 "GND" H 5205 5427 50  0000 C CNN
+F 2 "" H 5200 5600 50  0001 C CNN
+F 3 "" H 5200 5600 50  0001 C CNN
+	1    5200 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 5600 5200 5550
+Wire Wire Line
+	5200 5550 5350 5550
+Wire Wire Line
+	5350 5550 5350 5300
+Wire Wire Line
+	5350 5300 5300 5300
+Wire Wire Line
+	5100 5300 5050 5300
+Wire Wire Line
+	5050 5300 5050 5550
+Wire Wire Line
+	5050 5550 5200 5550
+Connection ~ 5200 5550
 $EndSCHEMATC
