@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L 24-clocks:VID66-08 U?
+L 24-clocks-rescue:VID66-08-24-clocks U?
 U 1 1 5FCE4F17
 P 6450 2350
 AR Path="/5FCE4F17" Ref="U?"  Part="1" 
@@ -31,7 +31,7 @@ $EndComp
 Text Label 5150 2050 0    50   ~ 0
 M-A-Step
 $Comp
-L 24-clocks:VID28-05 U?
+L 24-clocks-rescue:VID28-05-24-clocks U?
 U 1 1 5FCE4F23
 P 8050 1800
 AR Path="/5FCE4F23" Ref="U?"  Part="1" 
@@ -45,7 +45,7 @@ F 4 "-MASTER" H 8050 1800 50  0001 C CNN "Config"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 24-clocks:VID28-05 U?
+L 24-clocks-rescue:VID28-05-24-clocks U?
 U 2 1 5FCE4F29
 P 8050 2550
 AR Path="/5FCE4F29" Ref="U?"  Part="2" 
@@ -388,7 +388,7 @@ U 1 1 5FF9BCFD
 P 4650 4950
 F 0 "TP314" H 4708 5022 50  0000 L CNN
 F 1 "HAL-A" H 4708 4977 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 4850 4950 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 4850 4950 50  0001 C CNN
 F 3 "~" H 4850 4950 50  0001 C CNN
 	1    4650 4950
 	1    0    0    -1  
@@ -403,7 +403,7 @@ U 1 1 5FF9DCA7
 P 6850 4950
 F 0 "TP315" H 6908 5022 50  0000 L CNN
 F 1 "HAL-B" H 6908 4977 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 7050 4950 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 7050 4950 50  0001 C CNN
 F 3 "~" H 7050 4950 50  0001 C CNN
 	1    6850 4950
 	1    0    0    -1  
@@ -418,7 +418,7 @@ U 1 1 5FF9F67F
 P 9350 1800
 F 0 "TP301" V 9350 2000 50  0000 L CNN
 F 1 "MA1" H 9408 1827 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 9550 1800 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9550 1800 50  0001 C CNN
 F 3 "~" H 9550 1800 50  0001 C CNN
 	1    9350 1800
 	0    1    -1   0   
@@ -429,7 +429,7 @@ U 1 1 5FFA0591
 P 9350 1900
 F 0 "TP302" V 9350 2100 50  0000 L CNN
 F 1 "MA2" H 9408 1927 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 9550 1900 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9550 1900 50  0001 C CNN
 F 3 "~" H 9550 1900 50  0001 C CNN
 	1    9350 1900
 	0    1    -1   0   
@@ -440,7 +440,7 @@ U 1 1 5FFA0852
 P 9350 2000
 F 0 "TP304" V 9350 2200 50  0000 L CNN
 F 1 "MA3" H 9408 2027 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 9550 2000 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9550 2000 50  0001 C CNN
 F 3 "~" H 9550 2000 50  0001 C CNN
 	1    9350 2000
 	0    1    -1   0   
@@ -451,7 +451,7 @@ U 1 1 5FFA0AC7
 P 9350 2100
 F 0 "TP307" V 9350 2300 50  0000 L CNN
 F 1 "MA4" H 9408 2127 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 9550 2100 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9550 2100 50  0001 C CNN
 F 3 "~" H 9550 2100 50  0001 C CNN
 	1    9350 2100
 	0    1    -1   0   
@@ -470,7 +470,7 @@ U 1 1 5FFAB35D
 P 9350 2550
 F 0 "TP310" V 9350 2750 50  0000 L CNN
 F 1 "MB1" H 9408 2577 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 9550 2550 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9550 2550 50  0001 C CNN
 F 3 "~" H 9550 2550 50  0001 C CNN
 	1    9350 2550
 	0    1    -1   0   
@@ -481,7 +481,7 @@ U 1 1 5FFAB363
 P 9350 2650
 F 0 "TP311" V 9350 2850 50  0000 L CNN
 F 1 "MB2" H 9408 2677 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 9550 2650 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9550 2650 50  0001 C CNN
 F 3 "~" H 9550 2650 50  0001 C CNN
 	1    9350 2650
 	0    1    -1   0   
@@ -492,7 +492,7 @@ U 1 1 5FFAB369
 P 9350 2750
 F 0 "TP312" V 9350 2950 50  0000 L CNN
 F 1 "MB3" H 9408 2777 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 9550 2750 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9550 2750 50  0001 C CNN
 F 3 "~" H 9550 2750 50  0001 C CNN
 	1    9350 2750
 	0    1    -1   0   
@@ -503,7 +503,7 @@ U 1 1 5FFAB36F
 P 9350 2850
 F 0 "TP313" V 9350 3050 50  0000 L CNN
 F 1 "MB4" H 9408 2877 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 9550 2850 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9550 2850 50  0001 C CNN
 F 3 "~" H 9550 2850 50  0001 C CNN
 	1    9350 2850
 	0    1    -1   0   
@@ -538,7 +538,7 @@ U 1 1 5FFB453E
 P 5100 2350
 F 0 "TP309" V 5100 2550 50  0000 L CNN
 F 1 "M-B-Step" H 5158 2377 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 5300 2350 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5300 2350 50  0001 C CNN
 F 3 "~" H 5300 2350 50  0001 C CNN
 	1    5100 2350
 	0    -1   1    0   
@@ -549,7 +549,7 @@ U 1 1 5FFBD755
 P 5100 2250
 F 0 "TP308" V 5100 2450 50  0000 L CNN
 F 1 "M-B-CW" H 5158 2277 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 5300 2250 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5300 2250 50  0001 C CNN
 F 3 "~" H 5300 2250 50  0001 C CNN
 	1    5100 2250
 	0    -1   1    0   
@@ -560,7 +560,7 @@ U 1 1 5FFBD8F9
 P 5100 2050
 F 0 "TP306" V 5100 2250 50  0000 L CNN
 F 1 "M-A-Step" H 5158 2077 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 5300 2050 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5300 2050 50  0001 C CNN
 F 3 "~" H 5300 2050 50  0001 C CNN
 	1    5100 2050
 	0    -1   1    0   
@@ -571,7 +571,7 @@ U 1 1 5FFBDA8A
 P 5100 1950
 F 0 "TP305" V 5100 2150 50  0000 L CNN
 F 1 "M-A-CW" H 5158 1977 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 5300 1950 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5300 1950 50  0001 C CNN
 F 3 "~" H 5300 1950 50  0001 C CNN
 	1    5100 1950
 	0    -1   1    0   
@@ -582,7 +582,7 @@ U 1 1 5FFBDBE2
 P 5100 1750
 F 0 "TP303" V 5100 1950 50  0000 L CNN
 F 1 "M-Rst" H 5158 1777 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 5300 1750 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5300 1750 50  0001 C CNN
 F 3 "~" H 5300 1750 50  0001 C CNN
 	1    5100 1750
 	0    -1   1    0   

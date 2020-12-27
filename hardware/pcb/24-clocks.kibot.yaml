@@ -32,6 +32,7 @@ outputs:
     comment: "Schematic PDF"
     type: pdf_sch_print
     dir: schematic
+
   - name: 'bom_xlsx'
     comment: "Spreadsheet for the Bill of Materials"
     type: bom
@@ -118,7 +119,7 @@ outputs:
     comment: "PDF to show fab layers"
     type: pdf_pcb_print
     dir: PCB
-    layers: [ F.Fab, F.Paste, F.Adhes, Dwgs.User ]
+    layers: [ F.Fab, Dwgs.User ]
 
   # - name: board_top
   #   comment: "Top layer view"

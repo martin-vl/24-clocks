@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# 24-clocks_Battery_Cell_2Plus
+# 24-clocks-rescue_Battery_Cell_2Plus-24-clocks
 #
-DEF 24-clocks_Battery_Cell_2Plus BT 0 0 N N 1 F N
+DEF 24-clocks-rescue_Battery_Cell_2Plus-24-clocks BT 0 0 N N 1 F N
 F0 "BT" 100 100 50 H V L CNN
-F1 "24-clocks_Battery_Cell_2Plus" 100 0 50 H V L CNN
+F1 "24-clocks-rescue_Battery_Cell_2Plus-24-clocks" 100 0 50 H V L CNN
 F2 "" 0 60 50 V I C CNN
 F3 "" 0 60 50 V I C CNN
 DRAW
@@ -23,11 +23,11 @@ X + 3 50 250 50 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# 24-clocks_ESP32-WROOM-32D
+# 24-clocks-rescue_ESP32-WROOM-32D-24-clocks
 #
-DEF 24-clocks_ESP32-WROOM-32D U 0 20 Y Y 1 F N
+DEF 24-clocks-rescue_ESP32-WROOM-32D-24-clocks U 0 20 Y Y 1 F N
 F0 "U" -500 1350 50 H V L CNN
-F1 "24-clocks_ESP32-WROOM-32D" 50 1350 50 H V L CNN
+F1 "24-clocks-rescue_ESP32-WROOM-32D-24-clocks" 50 1350 50 H V L CNN
 F2 "RF_Module:ESP32-WROOM-32" 0 -1500 50 H I C CNN
 F3 "" -300 50 50 H I C CNN
 $FPLIST
@@ -76,11 +76,11 @@ X IO33 9 600 -900 100 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# 24-clocks_VID28-05
+# 24-clocks-rescue_VID28-05-24-clocks
 #
-DEF 24-clocks_VID28-05 U 0 40 N Y 2 F N
+DEF 24-clocks-rescue_VID28-05-24-clocks U 0 40 N Y 2 F N
 F0 "U" 0 250 50 H V C CNN
-F1 "24-clocks_VID28-05" 0 -250 50 H V C CNN
+F1 "24-clocks-rescue_VID28-05-24-clocks" 0 -250 50 H V C CNN
 F2 "" 0 -350 50 H I C CNN
 F3 "" -350 0 50 H I C CNN
 DRAW
@@ -107,11 +107,11 @@ X B4 8 350 100 100 L 50 50 2 1 I
 ENDDRAW
 ENDDEF
 #
-# 24-clocks_VID66-08
+# 24-clocks-rescue_VID66-08-24-clocks
 #
-DEF 24-clocks_VID66-08 U 0 40 Y Y 1 F N
+DEF 24-clocks-rescue_VID66-08-24-clocks U 0 40 Y Y 1 F N
 F0 "U" -450 750 50 H V C CNN
-F1 "24-clocks_VID66-08" -300 -750 50 H V C CNN
+F1 "24-clocks-rescue_VID66-08-24-clocks" -300 -750 50 H V C CNN
 F2 "TSOP-20" 250 -750 50 H I C CNN
 F3 "" -550 -300 50 H I C CNN
 DRAW

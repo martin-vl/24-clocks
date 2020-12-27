@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L 24-clocks:ESP32-WROOM-32D U?
+L 24-clocks-rescue:ESP32-WROOM-32D-24-clocks U?
 U 1 1 5FDA8E5C
 P 6000 4150
 AR Path="/5FDA8E5C" Ref="U?"  Part="1" 
@@ -226,7 +226,7 @@ AR Path="/5FDADE19" Ref="J?"  Part="1"
 AR Path="/5FDA43A0/5FDADE19" Ref="J601"  Part="1" 
 F 0 "J601" H 9000 2975 50  0000 C CNN
 F 1 "Conn_02x03_Odd_Even" H 9000 2976 50  0001 C CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_2x03_P1.27mm_Horizontal" H 8950 2750 50  0001 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x03_P1.27mm_Vertical" H 8950 2750 50  0001 C CNN
 F 3 "~" H 8950 2750 50  0001 C CNN
 F 4 "-SLAVE" H 8950 2750 50  0001 C CNN "Config"
 	1    8950 2750
@@ -342,7 +342,7 @@ U 1 1 5FE4BA8B
 P 7200 3950
 F 0 "TP601" V 7200 4138 50  0000 L CNN
 F 1 "uC-WiFi-Tx" V 7245 4138 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 7400 3950 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 7400 3950 50  0001 C CNN
 F 3 "~" H 7400 3950 50  0001 C CNN
 	1    7200 3950
 	0    1    1    0   
@@ -353,7 +353,7 @@ U 1 1 5FE4C9AE
 P 7200 4050
 F 0 "TP602" V 7200 4238 50  0000 L CNN
 F 1 "uC-WiFi-Rx" V 7245 4238 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 7400 4050 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 7400 4050 50  0001 C CNN
 F 3 "~" H 7400 4050 50  0001 C CNN
 	1    7200 4050
 	0    1    1    0   

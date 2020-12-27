@@ -46,7 +46,7 @@ AR Path="/5FD2E1FE" Ref="J?"  Part="1"
 AR Path="/5FD135B5/5FD2E1FE" Ref="J402"  Part="1" 
 F 0 "J402" H 7850 1900 50  0000 C CNN
 F 1 "Conn_01x04" H 8050 2000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7700 2050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 7700 2050 50  0001 C CNN
 F 3 "~" H 7700 2050 50  0001 C CNN
 	1    7700 2050
 	1    0    0    1   
@@ -149,7 +149,7 @@ AR Path="/5FD2E22D" Ref="J?"  Part="1"
 AR Path="/5FD135B5/5FD2E22D" Ref="J401"  Part="1" 
 F 0 "J401" H 6200 1900 50  0000 L CNN
 F 1 "Conn_01x04" H 6200 2000 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6100 2050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 6100 2050 50  0001 C CNN
 F 3 "~" H 6100 2050 50  0001 C CNN
 	1    6100 2050
 	-1   0    0    1   
@@ -272,7 +272,7 @@ U 1 1 5FFCAC49
 P 4450 2850
 F 0 "TP401" V 4450 3050 50  0000 L CNN
 F 1 "uC-RS485-Rx" V 4554 2922 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 4650 2850 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 4650 2850 50  0001 C CNN
 F 3 "~" H 4650 2850 50  0001 C CNN
 	1    4450 2850
 	0    -1   -1   0   
@@ -283,7 +283,7 @@ U 1 1 5FFCBD49
 P 4450 3000
 F 0 "TP402" V 4450 3200 50  0000 L CNN
 F 1 "uC-RS485-DE" V 4554 3072 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 4650 3000 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 4650 3000 50  0001 C CNN
 F 3 "~" H 4650 3000 50  0001 C CNN
 	1    4450 3000
 	0    -1   -1   0   
@@ -294,7 +294,7 @@ U 1 1 5FFCBF72
 P 4450 3150
 F 0 "TP403" V 4450 3350 50  0000 L CNN
 F 1 "uC-RS485-Tx" V 4554 3222 50  0001 C CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 4650 3150 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 4650 3150 50  0001 C CNN
 F 3 "~" H 4650 3150 50  0001 C CNN
 	1    4450 3150
 	0    -1   -1   0   
