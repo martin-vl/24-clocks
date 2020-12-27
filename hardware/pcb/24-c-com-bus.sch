@@ -22,17 +22,11 @@ AR Path="/5FD2E1EF" Ref="U?"  Part="1"
 AR Path="/5FD135B5/5FD2E1EF" Ref="U401"  Part="1" 
 F 0 "U401" H 5400 3450 50  0000 C CNN
 F 1 "MAX3485" H 5900 2400 50  0000 C CNN
-F 2 "" H 5650 2250 50  0001 C CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 5650 2250 50  0001 C CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/MAX3483-MAX3491.pdf" H 5650 3000 50  0001 C CNN
 	1    5650 2950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4550 2850 5250 2850
-Wire Wire Line
-	4550 3000 5250 3000
-Wire Wire Line
-	4550 3150 5250 3150
 Wire Wire Line
 	5250 3050 5250 3000
 Connection ~ 5250 3000
@@ -52,7 +46,7 @@ AR Path="/5FD2E1FE" Ref="J?"  Part="1"
 AR Path="/5FD135B5/5FD2E1FE" Ref="J402"  Part="1" 
 F 0 "J402" H 7850 1900 50  0000 C CNN
 F 1 "Conn_01x04" H 8050 2000 50  0000 C CNN
-F 2 "" H 7700 2050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 7700 2050 50  0001 C CNN
 F 3 "~" H 7700 2050 50  0001 C CNN
 	1    7700 2050
 	1    0    0    1   
@@ -126,8 +120,8 @@ P 6150 3000
 AR Path="/5FD2E221" Ref="R?"  Part="1" 
 AR Path="/5FD135B5/5FD2E221" Ref="R401"  Part="1" 
 F 0 "R401" H 6220 3046 50  0000 L CNN
-F 1 "R" H 6220 2955 50  0000 L CNN
-F 2 "" V 6080 3000 50  0001 C CNN
+F 1 "120E" H 6220 2955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6080 3000 50  0001 C CNN
 F 3 "~" H 6150 3000 50  0001 C CNN
 F 4 "-MASTER,-SLAVE" H 6150 3000 50  0001 C CNN "Config"
 	1    6150 3000
@@ -141,7 +135,7 @@ AR Path="/5FD2E227" Ref="C?"  Part="1"
 AR Path="/5FD135B5/5FD2E227" Ref="C401"  Part="1" 
 F 0 "C401" H 5165 3696 50  0000 L CNN
 F 1 "100nF" H 5165 3605 50  0000 L CNN
-F 2 "C0603" H 5088 3500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5088 3500 50  0001 C CNN
 F 3 "~" H 5050 3650 50  0001 C CNN
 F 4 "-MASTER" H 5050 3650 50  0001 C CNN "Config"
 	1    5050 3650
@@ -155,7 +149,7 @@ AR Path="/5FD2E22D" Ref="J?"  Part="1"
 AR Path="/5FD135B5/5FD2E22D" Ref="J401"  Part="1" 
 F 0 "J401" H 6200 1900 50  0000 L CNN
 F 1 "Conn_01x04" H 6200 2000 50  0000 L CNN
-F 2 "" H 6100 2050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 6100 2050 50  0001 C CNN
 F 3 "~" H 6100 2050 50  0001 C CNN
 	1    6100 2050
 	-1   0    0    1   
@@ -270,4 +264,45 @@ Text Label 3000 2450 2    50   ~ 0
 uC-RS485-Tx
 Text Label 3000 2550 2    50   ~ 0
 uC-RS485-DE
+Wire Wire Line
+	5650 2450 5650 2400
+$Comp
+L Connector:TestPoint TP401
+U 1 1 5FFCAC49
+P 4450 2850
+F 0 "TP401" V 4450 3050 50  0000 L CNN
+F 1 "uC-RS485-Rx" V 4554 2922 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 4650 2850 50  0001 C CNN
+F 3 "~" H 4650 2850 50  0001 C CNN
+	1    4450 2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP402
+U 1 1 5FFCBD49
+P 4450 3000
+F 0 "TP402" V 4450 3200 50  0000 L CNN
+F 1 "uC-RS485-DE" V 4554 3072 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 4650 3000 50  0001 C CNN
+F 3 "~" H 4650 3000 50  0001 C CNN
+	1    4450 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP403
+U 1 1 5FFCBF72
+P 4450 3150
+F 0 "TP403" V 4450 3350 50  0000 L CNN
+F 1 "uC-RS485-Tx" V 4554 3222 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 4650 3150 50  0001 C CNN
+F 3 "~" H 4650 3150 50  0001 C CNN
+	1    4450 3150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4450 2850 5250 2850
+Wire Wire Line
+	4450 3000 5250 3000
+Wire Wire Line
+	4450 3150 5250 3150
 $EndSCHEMATC
