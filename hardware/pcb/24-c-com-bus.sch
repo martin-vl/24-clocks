@@ -46,7 +46,7 @@ AR Path="/5FD2E1FE" Ref="J?"  Part="1"
 AR Path="/5FD135B5/5FD2E1FE" Ref="J402"  Part="1" 
 F 0 "J402" H 7850 1900 50  0000 C CNN
 F 1 "Conn_01x04" H 8050 2000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 7700 2050 50  0001 C CNN
+F 2 "Connector_JST:JST_XH_S4B-XH-A-1_1x04_P2.50mm_Horizontal" H 7700 2050 50  0001 C CNN
 F 3 "~" H 7700 2050 50  0001 C CNN
 	1    7700 2050
 	1    0    0    1   
@@ -149,7 +149,7 @@ AR Path="/5FD2E22D" Ref="J?"  Part="1"
 AR Path="/5FD135B5/5FD2E22D" Ref="J401"  Part="1" 
 F 0 "J401" H 6200 1900 50  0000 L CNN
 F 1 "Conn_01x04" H 6200 2000 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 6100 2050 50  0001 C CNN
+F 2 "Connector_JST:JST_XH_S4B-XH-A-1_1x04_P2.50mm_Horizontal" H 6100 2050 50  0001 C CNN
 F 3 "~" H 6100 2050 50  0001 C CNN
 	1    6100 2050
 	-1   0    0    1   
@@ -191,17 +191,17 @@ Wire Wire Line
 Wire Wire Line
 	6300 1950 6800 1950
 Wire Wire Line
-	6300 2050 7050 2050
+	6300 2050 7000 2050
 Wire Wire Line
 	6800 2850 6800 1950
 Connection ~ 6800 1950
 Wire Wire Line
 	6800 1950 7500 1950
 Wire Wire Line
-	7050 3150 7050 2050
-Connection ~ 7050 2050
+	7000 3150 7000 2050
+Connection ~ 7000 2050
 Wire Wire Line
-	7050 2050 7500 2050
+	7000 2050 7500 2050
 Text Label 6400 2850 0    50   ~ 0
 RS485-B
 Text Label 6400 3150 0    50   ~ 0
@@ -213,7 +213,7 @@ Connection ~ 6150 3150
 Wire Wire Line
 	6150 3150 6050 3150
 Wire Wire Line
-	6150 3150 7050 3150
+	6150 3150 7000 3150
 Wire Wire Line
 	6150 2850 6800 2850
 $Comp
@@ -305,4 +305,36 @@ Wire Wire Line
 	4450 3000 5250 3000
 Wire Wire Line
 	4450 3150 5250 3150
+$Comp
+L SparkFun-DiscreteSemi:PESD1CAN D401
+U 1 1 5FEA3168
+P 6900 3550
+F 0 "D401" V 6858 3778 45  0000 L CNN
+F 1 "PESD1CAN" V 6942 3778 45  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6900 3900 20  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PESD1CAN.pdf" H 6900 3550 50  0001 C CNN
+	1    6900 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6800 2850 6800 3250
+Connection ~ 6800 2850
+Wire Wire Line
+	7000 3150 7000 3250
+Connection ~ 7000 3150
+$Comp
+L power:GND #PWR?
+U 1 1 5FEA7BEF
+P 6900 3900
+AR Path="/5FEA7BEF" Ref="#PWR?"  Part="1" 
+AR Path="/5FD135B5/5FEA7BEF" Ref="#PWR0409"  Part="1" 
+F 0 "#PWR0409" H 6900 3650 50  0001 C CNN
+F 1 "GND" H 6905 3727 50  0000 C CNN
+F 2 "" H 6900 3900 50  0001 C CNN
+F 3 "" H 6900 3900 50  0001 C CNN
+	1    6900 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 3900 6900 3850
 $EndSCHEMATC
