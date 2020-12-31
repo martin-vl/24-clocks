@@ -45,9 +45,9 @@ P 7700 2050
 AR Path="/5FD2E1FE" Ref="J?"  Part="1" 
 AR Path="/5FD135B5/5FD2E1FE" Ref="J402"  Part="1" 
 F 0 "J402" H 7850 1900 50  0000 C CNN
-F 1 "Conn_01x04" H 8050 2000 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_S4B-XH-A-1_1x04_P2.50mm_Horizontal" H 7700 2050 50  0001 C CNN
-F 3 "~" H 7700 2050 50  0001 C CNN
+F 1 "S4B_XH_SM4_TB" H 8050 2000 50  0000 C CNN
+F 2 "mvl-footprints:JST_S4B_XH_SM4_TB" H 7700 2050 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eXH.pdf" H 7700 2050 50  0001 C CNN
 	1    7700 2050
 	1    0    0    1   
 $EndComp
@@ -148,9 +148,9 @@ P 6100 2050
 AR Path="/5FD2E22D" Ref="J?"  Part="1" 
 AR Path="/5FD135B5/5FD2E22D" Ref="J401"  Part="1" 
 F 0 "J401" H 6200 1900 50  0000 L CNN
-F 1 "Conn_01x04" H 6200 2000 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_S4B-XH-A-1_1x04_P2.50mm_Horizontal" H 6100 2050 50  0001 C CNN
-F 3 "~" H 6100 2050 50  0001 C CNN
+F 1 "S4B_XH_SM4_TB" H 6200 2000 50  0000 L CNN
+F 2 "mvl-footprints:JST_S4B_XH_SM4_TB" H 6100 2050 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eXH.pdf" H 6100 2050 50  0001 C CNN
 	1    6100 2050
 	-1   0    0    1   
 $EndComp
