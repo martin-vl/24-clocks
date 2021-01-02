@@ -180,7 +180,7 @@ AR Path="/5FCEC14D" Ref="U?"  Part="1"
 AR Path="/5FCDA719/5FCEC14D" Ref="U303"  Part="1" 
 F 0 "U303" H 5670 5096 50  0000 R CNN
 F 1 "AH3572" H 5670 5005 50  0000 R CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5950 5050 50  0001 C CNN
+F 2 "mvl-footprints:SOT-23-UD" H 5950 5050 50  0001 C CNN
 F 3 "https://www.diodes.com/assets/Datasheets/AH3572.pdf" H 5950 5050 50  0001 C CNN
 F 4 "-MASTER" H 6000 5050 50  0001 C CNN "Config"
 	1    6000 5050
@@ -260,7 +260,7 @@ AR Path="/5FCEC173" Ref="U?"  Part="1"
 AR Path="/5FCDA719/5FCEC173" Ref="U304"  Part="1" 
 F 0 "U304" H 7870 5096 50  0000 R CNN
 F 1 "AH3572" H 7870 5005 50  0000 R CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 8150 5050 50  0001 C CNN
+F 2 "mvl-footprints:SOT-23-UD" H 8150 5050 50  0001 C CNN
 F 3 "https://www.diodes.com/assets/Datasheets/AH3572.pdf" H 8150 5050 50  0001 C CNN
 F 4 "-MASTER" H 8200 5050 50  0001 C CNN "Config"
 	1    8200 5050

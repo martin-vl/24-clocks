@@ -22,7 +22,7 @@ AR Path="/5FD2E1EF" Ref="U?"  Part="1"
 AR Path="/5FD135B5/5FD2E1EF" Ref="U401"  Part="1" 
 F 0 "U401" H 5400 3450 50  0000 C CNN
 F 1 "MAX3485" H 5900 2400 50  0000 C CNN
-F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 5650 2250 50  0001 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5650 2250 50  0001 C CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/MAX3483-MAX3491.pdf" H 5650 3000 50  0001 C CNN
 	1    5650 2950
 	1    0    0    -1  
@@ -123,7 +123,7 @@ F 0 "R401" H 6220 3046 50  0000 L CNN
 F 1 "120E" H 6220 2955 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 6080 3000 50  0001 C CNN
 F 3 "~" H 6150 3000 50  0001 C CNN
-F 4 "-MASTER,-SLAVE" H 6150 3000 50  0001 C CNN "Config"
+F 4 "-SLAVE" H 6150 3000 50  0001 C CNN "Config"
 	1    6150 3000
 	1    0    0    -1  
 $EndComp
