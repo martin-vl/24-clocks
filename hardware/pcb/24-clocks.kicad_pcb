@@ -2,10 +2,10 @@
 
   (general
     (thickness 1.6)
-    (drawings 2)
+    (drawings 3)
     (tracks 0)
     (zones 0)
-    (modules 95)
+    (modules 97)
     (nets 52)
   )
 
@@ -60,6 +60,7 @@
     (pad_to_mask_clearance 0.051)
     (solder_mask_min_width 0.25)
     (aux_axis_origin 0 0)
+    (grid_origin 150 100)
     (visible_elements FFFDFF7F)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
@@ -248,41 +249,118 @@
     (add_net "Net-(U702-Pad2)")
   )
 
-  (module Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm (layer F.Cu) (tedit 5A0FD1B2) (tstamp 5FE7CFFA)
-    (at 111.594 94.572 270)
-    (descr "SMD Crystal SERIES SMD3225/4 http://www.txccrystal.com/images/pdf/7m-accuracy.pdf, 3.2x2.5mm^2 package")
-    (tags "SMD SMT crystal")
+  (module Package_TO_SOT_SMD:TSOT-23 (layer B.Cu) (tedit 5A02FF57) (tstamp 5FF297E4)
+    (at 150 120 90)
+    (descr "3-pin TSOT23 package, http://www.analog.com.tw/pdf/All_In_One.pdf")
+    (tags TSOT-23)
+    (path /5FCDA719/5FF3B4AC)
+    (attr smd)
+    (fp_text reference U306 (at 0 2.45 90) (layer B.SilkS)
+      (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+    )
+    (fp_text value AH3572 (at 0 -2.5 90) (layer B.Fab)
+      (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+    )
+    (fp_line (start 2.17 -1.7) (end -2.17 -1.7) (layer B.CrtYd) (width 0.05))
+    (fp_line (start 2.17 -1.7) (end 2.17 1.7) (layer B.CrtYd) (width 0.05))
+    (fp_line (start -2.17 1.7) (end -2.17 -1.7) (layer B.CrtYd) (width 0.05))
+    (fp_line (start -2.17 1.7) (end 2.17 1.7) (layer B.CrtYd) (width 0.05))
+    (fp_line (start 0.88 1.45) (end 0.88 -1.45) (layer B.Fab) (width 0.1))
+    (fp_line (start 0.88 -1.45) (end -0.88 -1.45) (layer B.Fab) (width 0.1))
+    (fp_line (start -0.88 1) (end -0.88 -1.45) (layer B.Fab) (width 0.1))
+    (fp_line (start 0.88 1.45) (end -0.43 1.45) (layer B.Fab) (width 0.1))
+    (fp_line (start -0.88 1) (end -0.43 1.45) (layer B.Fab) (width 0.1))
+    (fp_line (start 0.93 1.51) (end -1.5 1.51) (layer B.SilkS) (width 0.12))
+    (fp_line (start 0.95 1.5) (end 0.95 0.5) (layer B.SilkS) (width 0.12))
+    (fp_line (start 0.95 -1.55) (end -0.9 -1.55) (layer B.SilkS) (width 0.12))
+    (fp_line (start 0.95 -0.5) (end 0.95 -1.55) (layer B.SilkS) (width 0.12))
+    (fp_text user %R (at 0 0 180) (layer B.Fab)
+      (effects (font (size 0.5 0.5) (thickness 0.075)) (justify mirror))
+    )
+    (pad 3 smd rect (at 1.31 0 90) (size 1.22 0.65) (layers B.Cu B.Paste B.Mask)
+      (net 1 GND))
+    (pad 2 smd rect (at -1.31 -0.95 90) (size 1.22 0.65) (layers B.Cu B.Paste B.Mask)
+      (net 30 /Mechanics/HAL-B))
+    (pad 1 smd rect (at -1.31 0.95 90) (size 1.22 0.65) (layers B.Cu B.Paste B.Mask)
+      (net 3 +3V3))
+    (model ${KISYS3DMOD}/Package_TO_SOT_SMD.3dshapes/TSOT-23.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+  )
+
+  (module Package_TO_SOT_SMD:TSOT-23 (layer B.Cu) (tedit 5A02FF57) (tstamp 5FF297CF)
+    (at 150 110 90)
+    (descr "3-pin TSOT23 package, http://www.analog.com.tw/pdf/All_In_One.pdf")
+    (tags TSOT-23)
+    (path /5FCDA719/5FF39145)
+    (attr smd)
+    (fp_text reference U305 (at 0 2.45 90) (layer B.SilkS)
+      (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+    )
+    (fp_text value AH3572 (at 0 -2.5 90) (layer B.Fab)
+      (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+    )
+    (fp_line (start 2.17 -1.7) (end -2.17 -1.7) (layer B.CrtYd) (width 0.05))
+    (fp_line (start 2.17 -1.7) (end 2.17 1.7) (layer B.CrtYd) (width 0.05))
+    (fp_line (start -2.17 1.7) (end -2.17 -1.7) (layer B.CrtYd) (width 0.05))
+    (fp_line (start -2.17 1.7) (end 2.17 1.7) (layer B.CrtYd) (width 0.05))
+    (fp_line (start 0.88 1.45) (end 0.88 -1.45) (layer B.Fab) (width 0.1))
+    (fp_line (start 0.88 -1.45) (end -0.88 -1.45) (layer B.Fab) (width 0.1))
+    (fp_line (start -0.88 1) (end -0.88 -1.45) (layer B.Fab) (width 0.1))
+    (fp_line (start 0.88 1.45) (end -0.43 1.45) (layer B.Fab) (width 0.1))
+    (fp_line (start -0.88 1) (end -0.43 1.45) (layer B.Fab) (width 0.1))
+    (fp_line (start 0.93 1.51) (end -1.5 1.51) (layer B.SilkS) (width 0.12))
+    (fp_line (start 0.95 1.5) (end 0.95 0.5) (layer B.SilkS) (width 0.12))
+    (fp_line (start 0.95 -1.55) (end -0.9 -1.55) (layer B.SilkS) (width 0.12))
+    (fp_line (start 0.95 -0.5) (end 0.95 -1.55) (layer B.SilkS) (width 0.12))
+    (fp_text user %R (at 0 0 180) (layer B.Fab)
+      (effects (font (size 0.5 0.5) (thickness 0.075)) (justify mirror))
+    )
+    (pad 3 smd rect (at 1.31 0 90) (size 1.22 0.65) (layers B.Cu B.Paste B.Mask)
+      (net 1 GND))
+    (pad 2 smd rect (at -1.31 -0.95 90) (size 1.22 0.65) (layers B.Cu B.Paste B.Mask)
+      (net 29 /Mechanics/HAL-A))
+    (pad 1 smd rect (at -1.31 0.95 90) (size 1.22 0.65) (layers B.Cu B.Paste B.Mask)
+      (net 3 +3V3))
+    (model ${KISYS3DMOD}/Package_TO_SOT_SMD.3dshapes/TSOT-23.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+  )
+
+  (module mvl-footprints:Crystal_SMD_3225-2Pin_3.2x2.5mm (layer F.Cu) (tedit 5FF1AFD9) (tstamp 5FE7CFFA)
+    (at 112.268 94.93 90)
+    (descr "SMD Crystal FC-135 https://support.epson.biz/td/api/doc_check.php?dl=brief_FC-135R_en.pdf")
+    (tags "SMD SMT Crystal")
     (path /5FDEAABE/5FE749A7)
     (attr smd)
-    (fp_text reference Y201 (at 0 -2.45 90) (layer F.SilkS)
+    (fp_text reference Y201 (at 0 -2.4 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 8MHz (at 0 2.45 90) (layer F.Fab)
+    (fp_text value "NX3225GD 8MHz" (at 0 2.4 90) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_line (start 2.1 -1.7) (end -2.1 -1.7) (layer F.CrtYd) (width 0.05))
-    (fp_line (start 2.1 1.7) (end 2.1 -1.7) (layer F.CrtYd) (width 0.05))
-    (fp_line (start -2.1 1.7) (end 2.1 1.7) (layer F.CrtYd) (width 0.05))
-    (fp_line (start -2.1 -1.7) (end -2.1 1.7) (layer F.CrtYd) (width 0.05))
-    (fp_line (start -2 1.65) (end 2 1.65) (layer F.SilkS) (width 0.12))
-    (fp_line (start -2 -1.65) (end -2 1.65) (layer F.SilkS) (width 0.12))
-    (fp_line (start -1.6 0.25) (end -0.6 1.25) (layer F.Fab) (width 0.1))
-    (fp_line (start 1.6 -1.25) (end -1.6 -1.25) (layer F.Fab) (width 0.1))
-    (fp_line (start 1.6 1.25) (end 1.6 -1.25) (layer F.Fab) (width 0.1))
+    (fp_line (start 2 -1.65) (end 2 1.65) (layer F.CrtYd) (width 0.05))
+    (fp_line (start -2 -1.65) (end -2 1.65) (layer F.CrtYd) (width 0.05))
+    (fp_line (start -2 1.65) (end 2 1.65) (layer F.CrtYd) (width 0.05))
     (fp_line (start -1.6 1.25) (end 1.6 1.25) (layer F.Fab) (width 0.1))
+    (fp_line (start -1.6 -1.25) (end 1.6 -1.25) (layer F.Fab) (width 0.1))
+    (fp_line (start 1.6 -1.25) (end 1.6 1.25) (layer F.Fab) (width 0.1))
+    (fp_line (start -0.1 -1.27) (end 0.1 -1.27) (layer F.SilkS) (width 0.12))
+    (fp_line (start -0.1 1.29) (end 0.1 1.29) (layer F.SilkS) (width 0.12))
     (fp_line (start -1.6 -1.25) (end -1.6 1.25) (layer F.Fab) (width 0.1))
-    (fp_text user %R (at 0 0 90) (layer F.Fab)
-      (effects (font (size 0.7 0.7) (thickness 0.105)))
+    (fp_line (start -2 -1.65) (end 2 -1.65) (layer F.CrtYd) (width 0.05))
+    (fp_text user %R (at 0 -2.4 90) (layer F.Fab)
+      (effects (font (size 1 1) (thickness 0.15)))
     )
-    (pad 4 smd rect (at -1.1 -0.85 270) (size 1.4 1.2) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at -0.95 0 90) (size 1.5 2.7) (layers F.Cu F.Paste F.Mask)
       (net 5 "Net-(C206-Pad1)"))
-    (pad 3 smd rect (at 1.1 -0.85 270) (size 1.4 1.2) (layers F.Cu F.Paste F.Mask)
-      (net 1 GND))
-    (pad 2 smd rect (at 1.1 0.85 270) (size 1.4 1.2) (layers F.Cu F.Paste F.Mask)
-      (net 1 GND))
-    (pad 1 smd rect (at -1.1 0.85 270) (size 1.4 1.2) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at 0.95 0 90) (size 1.5 2.7) (layers F.Cu F.Paste F.Mask)
       (net 4 "Net-(C205-Pad1)"))
-    (model ${KIPRJMOD}/shapes3D/Crystal_SMD_3225-4Pin_3.2x2.5mm.wrl
+    (model ${MVL3D}/crystals.3dshapes/Crystal_SMD_3225-2Pin_3.2x2.5mm.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -290,7 +368,7 @@
   )
 
   (module Package_SO:SOIC-8_3.9x4.9mm_P1.27mm (layer F.Cu) (tedit 5C97300E) (tstamp 5FE7BEDD)
-    (at 126.076 118.11)
+    (at 137.16 104.648 180)
     (descr "SOIC, 8 Pin (JEDEC MS-012AA, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_8.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOIC SO")
     (path /5FDBDABC/5FDCBDB1)
@@ -317,23 +395,23 @@
     (fp_line (start 0 -2.56) (end 1.95 -2.56) (layer F.SilkS) (width 0.12))
     (fp_line (start 0 2.56) (end -1.95 2.56) (layer F.SilkS) (width 0.12))
     (fp_line (start 0 2.56) (end 1.95 2.56) (layer F.SilkS) (width 0.12))
-    (pad 8 smd roundrect (at 2.475 -1.905) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 8 smd roundrect (at 2.475 -1.905 180) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (pad 7 smd roundrect (at 2.475 -0.635) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 7 smd roundrect (at 2.475 -0.635 180) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 31 "/RTC and Memory/RCLK"))
-    (pad 6 smd roundrect (at 2.475 0.635) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 6 smd roundrect (at 2.475 0.635 180) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 24 /I2C-SCL))
-    (pad 5 smd roundrect (at 2.475 1.905) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 5 smd roundrect (at 2.475 1.905 180) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 25 /I2C-SDA))
-    (pad 4 smd roundrect (at -2.475 1.905) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 4 smd roundrect (at -2.475 1.905 180) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 1 GND))
-    (pad 3 smd roundrect (at -2.475 0.635) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 3 smd roundrect (at -2.475 0.635 180) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 2 "Net-(BT701-Pad1)"))
-    (pad 2 smd roundrect (at -2.475 -0.635) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 2 smd roundrect (at -2.475 -0.635 180) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 51 "Net-(U702-Pad2)"))
-    (pad 1 smd roundrect (at -2.475 -1.905) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 1 smd roundrect (at -2.475 -1.905 180) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 50 "Net-(U702-Pad1)"))
-    (model ${KIPRJMOD}/shapes3D/SOIC-8_3.9x4.9mm_P1.27mm.wrl
+    (model ${KISYS3DMOD}/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -341,7 +419,7 @@
   )
 
   (module Package_SO:SOIC-8_3.9x4.9mm_P1.27mm (layer F.Cu) (tedit 5C97300E) (tstamp 5FE7CF11)
-    (at 150.241 61.433 270)
+    (at 150.241 72.644 90)
     (descr "SOIC, 8 Pin (JEDEC MS-012AA, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_8.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOIC SO")
     (path /5FD135B5/5FD2E1EF)
@@ -368,23 +446,23 @@
     (fp_line (start 0 -2.56) (end 1.95 -2.56) (layer F.SilkS) (width 0.12))
     (fp_line (start 0 2.56) (end -1.95 2.56) (layer F.SilkS) (width 0.12))
     (fp_line (start 0 2.56) (end 1.95 2.56) (layer F.SilkS) (width 0.12))
-    (pad 8 smd roundrect (at 2.475 -1.905 270) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 8 smd roundrect (at 2.475 -1.905 90) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (pad 7 smd roundrect (at 2.475 -0.635 270) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 7 smd roundrect (at 2.475 -0.635 90) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 17 "/Com Bus/RS485-B"))
-    (pad 6 smd roundrect (at 2.475 0.635 270) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 6 smd roundrect (at 2.475 0.635 90) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 16 "/Com Bus/RS485-A"))
-    (pad 5 smd roundrect (at 2.475 1.905 270) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 5 smd roundrect (at 2.475 1.905 90) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 1 GND))
-    (pad 4 smd roundrect (at -2.475 1.905 270) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 4 smd roundrect (at -2.475 1.905 90) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 47 "/Com Bus/uC-RS485-Tx"))
-    (pad 3 smd roundrect (at -2.475 0.635 270) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 3 smd roundrect (at -2.475 0.635 90) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 46 "/Com Bus/uC-RS485-DE"))
-    (pad 2 smd roundrect (at -2.475 -0.635 270) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 2 smd roundrect (at -2.475 -0.635 90) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 46 "/Com Bus/uC-RS485-DE"))
-    (pad 1 smd roundrect (at -2.475 -1.905 270) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 1 smd roundrect (at -2.475 -1.905 90) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 45 "/Com Bus/uC-RS485-Rx"))
-    (model ${KIPRJMOD}/shapes3D/SOIC-8_3.9x4.9mm_P1.27mm.wrl
+    (model ${KISYS3DMOD}/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -434,7 +512,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -2.475 -1.905 90) (size 1.95 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 1 GND))
-    (model ${KIPRJMOD}/shapes3D/SOIC-8_3.9x4.9mm_P1.27mm.wrl
+    (model ${KISYS3DMOD}/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -442,7 +520,7 @@
   )
 
   (module mvl-footprints:Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm (layer F.Cu) (tedit 5FF0D8C3) (tstamp 5FE98530)
-    (at 117.646 116.535 180)
+    (at 145.872 107.398)
     (descr "SMD Crystal Seiko Epson MC-306 https://support.epson.biz/td/api/doc_check.php?dl=brief_MC-306_en.pdf, 8.0x3.2mm^2 package")
     (tags "SMD SMT crystal")
     (path /5FDBDABC/5FE6F3FD)
@@ -476,15 +554,15 @@
     (fp_text user %R (at 0 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (pad 4 smd rect (at -2.75 -1.6 180) (size 1.3 1.9) (layers F.Cu F.Paste F.Mask)
+    (pad 4 smd rect (at -2.75 -1.6) (size 1.3 1.9) (layers F.Cu F.Paste F.Mask)
       (net 51 "Net-(U702-Pad2)"))
-    (pad 3 smd rect (at 2.75 -1.6 180) (size 1.3 1.9) (layers F.Cu F.Paste F.Mask)
+    (pad 3 smd rect (at 2.75 -1.6) (size 1.3 1.9) (layers F.Cu F.Paste F.Mask)
       (net 1 GND))
-    (pad 2 smd rect (at 2.75 1.6 180) (size 1.3 1.9) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at 2.75 1.6) (size 1.3 1.9) (layers F.Cu F.Paste F.Mask)
       (net 1 GND))
-    (pad 1 smd rect (at -2.75 1.6 180) (size 1.3 1.9) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -2.75 1.6) (size 1.3 1.9) (layers F.Cu F.Paste F.Mask)
       (net 50 "Net-(U702-Pad1)"))
-    (model ${KIPRJMOD}/shapes3D/MC-306.stp
+    (model ${MVL3D}/crystals.3dshapes/MC-306.stp
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -492,18 +570,18 @@
   )
 
   (module mvl-footprints:SOT-23-UD (layer F.Cu) (tedit 5FF0D601) (tstamp 5FE7CEF7)
-    (at 127.524 107.696)
+    (at 118.364 118.364 30)
     (descr "SOT-23, Standard")
     (tags SOT-23)
     (path /5FCDA719/5FCEC173)
     (attr smd)
-    (fp_text reference U304 (at 0 -2.5) (layer F.SilkS)
+    (fp_text reference U304 (at 0 -2.5 30) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value AH3572 (at 0 2.5) (layer F.Fab)
+    (fp_text value AH3572 (at 0 2.5 30) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user "Milled slot" (at 0.05 2.92) (layer Dwgs.User)
+    (fp_text user "Milled slot" (at 0.05 2.92 30) (layer Dwgs.User)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.6 1.5) (end 0.6 1.5) (layer Dwgs.User) (width 1))
@@ -531,16 +609,16 @@
     (fp_line (start -0.7 -0.95) (end -0.15 -1.52) (layer F.Fab) (width 0.1))
     (fp_line (start -0.15 -1.52) (end 0.7 -1.52) (layer F.Fab) (width 0.1))
     (fp_line (start -0.7 -0.95) (end -0.7 1.5) (layer F.Fab) (width 0.1))
-    (fp_text user %R (at 0 0 90) (layer F.Fab)
+    (fp_text user %R (at 0 0 120) (layer F.Fab)
       (effects (font (size 0.5 0.5) (thickness 0.075)))
     )
-    (pad 3 smd rect (at 1.5 0) (size 0.6 0.8) (layers F.Cu F.Paste F.Mask)
+    (pad 3 smd rect (at 1.5 0 30) (size 0.6 0.8) (layers F.Cu F.Paste F.Mask)
       (net 1 GND))
-    (pad 1 smd rect (at -1.5 0.95) (size 0.6 0.8) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -1.5 0.95 30) (size 0.6 0.8) (layers F.Cu F.Paste F.Mask)
       (net 3 +3V3))
-    (pad 2 smd rect (at -1.5 -0.95) (size 0.6 0.8) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at -1.5 -0.95 30) (size 0.6 0.8) (layers F.Cu F.Paste F.Mask)
       (net 30 /Mechanics/HAL-B))
-    (model ${KIPRJMOD}/shapes3D/SOT-23.wrl
+    (model ${KISYS3DMOD}/Package_TO_SOT_SMD.3dshapes/SOT-23.wrl
       (offset (xyz 0 0 0.12))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 180 180))
@@ -548,18 +626,18 @@
   )
 
   (module mvl-footprints:SOT-23-UD (layer F.Cu) (tedit 5FF0D601) (tstamp 5FEDCE81)
-    (at 117.364 109.728)
+    (at 129.54 111.76 30)
     (descr "SOT-23, Standard")
     (tags SOT-23)
     (path /5FCDA719/5FCEC14D)
     (attr smd)
-    (fp_text reference U303 (at 0 -2.5) (layer F.SilkS)
+    (fp_text reference U303 (at 0 -2.5 30) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value AH3572 (at 0 2.5) (layer F.Fab)
+    (fp_text value AH3572 (at 0 2.5 30) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user "Milled slot" (at 0.05 2.92) (layer Dwgs.User)
+    (fp_text user "Milled slot" (at 0.05 2.92 30) (layer Dwgs.User)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.6 1.5) (end 0.6 1.5) (layer Dwgs.User) (width 1))
@@ -587,16 +665,16 @@
     (fp_line (start -0.7 -0.95) (end -0.15 -1.52) (layer F.Fab) (width 0.1))
     (fp_line (start -0.15 -1.52) (end 0.7 -1.52) (layer F.Fab) (width 0.1))
     (fp_line (start -0.7 -0.95) (end -0.7 1.5) (layer F.Fab) (width 0.1))
-    (fp_text user %R (at 0 0 90) (layer F.Fab)
+    (fp_text user %R (at 0 0 120) (layer F.Fab)
       (effects (font (size 0.5 0.5) (thickness 0.075)))
     )
-    (pad 3 smd rect (at 1.5 0) (size 0.6 0.8) (layers F.Cu F.Paste F.Mask)
+    (pad 3 smd rect (at 1.5 0 30) (size 0.6 0.8) (layers F.Cu F.Paste F.Mask)
       (net 1 GND))
-    (pad 1 smd rect (at -1.5 0.95) (size 0.6 0.8) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -1.5 0.95 30) (size 0.6 0.8) (layers F.Cu F.Paste F.Mask)
       (net 3 +3V3))
-    (pad 2 smd rect (at -1.5 -0.95) (size 0.6 0.8) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at -1.5 -0.95 30) (size 0.6 0.8) (layers F.Cu F.Paste F.Mask)
       (net 29 /Mechanics/HAL-A))
-    (model ${KIPRJMOD}/shapes3D/SOT-23.wrl
+    (model ${KISYS3DMOD}/Package_TO_SOT_SMD.3dshapes/SOT-23.wrl
       (offset (xyz 0 0 0.12))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 180 180))
@@ -604,7 +682,7 @@
   )
 
   (module mvl-footprints:JST_S4B_XH_SM4_TB (layer F.Cu) (tedit 5FED802C) (tstamp 5FE7BE71)
-    (at 158.998 68.774 90)
+    (at 160.528 68.58 90)
     (descr http://www.jst-mfg.com/product/pdf/eng/eXH.pdf)
     (tags "JST XH")
     (path /5FD135B5/5FD2E1FE)
@@ -655,7 +733,7 @@
       (net 1 GND))
     (pad 2 smd rect (at -1.25 -3.55 90) (size 1.3 4.5) (layers F.Cu F.Paste F.Mask)
       (net 16 "/Com Bus/RS485-A"))
-    (model ${KIPRJMOD}/shapes3D/JST_S4B_XH_SM4_TB.STEP
+    (model ${MVL3D}/mech.3dshapes/JST_S4B_XH_SM4_TB.STEP
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -663,7 +741,7 @@
   )
 
   (module mvl-footprints:JST_S4B_XH_SM4_TB (layer F.Cu) (tedit 5FED802C) (tstamp 5FE97BB5)
-    (at 141.514 68.774 270)
+    (at 139.192 68.774 270)
     (descr http://www.jst-mfg.com/product/pdf/eng/eXH.pdf)
     (tags "JST XH")
     (path /5FD135B5/5FD2E22D)
@@ -714,7 +792,7 @@
       (net 1 GND))
     (pad 2 smd rect (at -1.25 -3.55 270) (size 1.3 4.5) (layers F.Cu F.Paste F.Mask)
       (net 16 "/Com Bus/RS485-A"))
-    (model ${KIPRJMOD}/shapes3D/JST_S4B_XH_SM4_TB.STEP
+    (model ${MVL3D}/mech.3dshapes/JST_S4B_XH_SM4_TB.STEP
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
@@ -722,7 +800,7 @@
   )
 
   (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5FEA821C)
-    (at 119.38 123.952)
+    (at 128.524 135.128)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (path /5FEC567F)
@@ -742,7 +820,7 @@
   )
 
   (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5FEA8214)
-    (at 166.116 80.772)
+    (at 182 74)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (path /5FEC5459)
@@ -762,7 +840,7 @@
   )
 
   (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5FEA820C)
-    (at 203.708 135.458)
+    (at 171.704 135.128)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (path /5FEC5189)
@@ -782,7 +860,7 @@
   )
 
   (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5FEA8BD2)
-    (at 116.84 80.772)
+    (at 118 74)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (path /5FEC3F65)
@@ -802,7 +880,7 @@
   )
 
   (module Package_TO_SOT_SMD:SOT-23 (layer F.Cu) (tedit 5A02FF57) (tstamp 5FEA128D)
-    (at 149.86 66.405 90)
+    (at 150.368 65.532 270)
     (descr "SOT-23, Standard")
     (tags SOT-23)
     (path /5FD135B5/5FEA3168)
@@ -829,13 +907,13 @@
     (fp_text user %R (at 0 0) (layer F.Fab)
       (effects (font (size 0.5 0.5) (thickness 0.075)))
     )
-    (pad 3 smd rect (at 1 0 90) (size 0.9 0.8) (layers F.Cu F.Paste F.Mask)
+    (pad 3 smd rect (at 1 0 270) (size 0.9 0.8) (layers F.Cu F.Paste F.Mask)
       (net 1 GND))
-    (pad 2 smd rect (at -1 0.95 90) (size 0.9 0.8) (layers F.Cu F.Paste F.Mask)
+    (pad 2 smd rect (at -1 0.95 270) (size 0.9 0.8) (layers F.Cu F.Paste F.Mask)
       (net 17 "/Com Bus/RS485-B"))
-    (pad 1 smd rect (at -1 -0.95 90) (size 0.9 0.8) (layers F.Cu F.Paste F.Mask)
+    (pad 1 smd rect (at -1 -0.95 270) (size 0.9 0.8) (layers F.Cu F.Paste F.Mask)
       (net 16 "/Com Bus/RS485-A"))
-    (model ${KIPRJMOD}/shapes3D/SOT-23.wrl
+    (model ${KISYS3DMOD}/Package_TO_SOT_SMD.3dshapes/SOT-23.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1640,9 +1718,10 @@
       (net 10 /uC/SWO))
   )
 
-  (module mvl-footprints:BATT_WE_79523141 (layer F.Cu) (tedit 5FE7A059) (tstamp 5FE7C912)
+  (module mvl-footprints:BATT_WE_79523141 (layer F.Cu) (tedit 5FF1B542) (tstamp 5FE7C912)
     (at 153.67 93.595 90)
     (path /5FDBDABC/5FE9121B)
+    (attr smd)
     (fp_text reference BT701 (at 0 12 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -1675,7 +1754,7 @@
       (net 2 "Net-(BT701-Pad1)"))
     (pad 2 smd rect (at 0 0 90) (size 4 4) (layers F.Cu F.Paste F.Mask)
       (net 1 GND))
-    (model ${KIPRJMOD}/shapes3D/BATT_WE_79523141.stp
+    (model ${MVL3D}/batt.3dshapes/BATT_WE_79523141.stp
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
@@ -1711,7 +1790,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/C_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1747,7 +1826,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/C_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1783,7 +1862,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/C_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1819,7 +1898,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/C_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1827,18 +1906,18 @@
   )
 
   (module Capacitor_SMD:C_0603_1608Metric (layer F.Cu) (tedit 5B301BBE) (tstamp 5FE7C967)
-    (at 107.515001 93.164001)
+    (at 109.728 93.7005 270)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5FDEAABE/5FE6323A)
     (attr smd)
-    (fp_text reference C205 (at 0 -1.43) (layer F.SilkS)
+    (fp_text reference C205 (at 0 -1.43 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 20pF (at 0 1.43) (layer F.Fab)
+    (fp_text value 20pF (at 0 1.43 90) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 0) (layer F.Fab)
+    (fp_text user %R (at 0 0 90) (layer F.Fab)
       (effects (font (size 0.4 0.4) (thickness 0.06)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -1851,11 +1930,11 @@
     (fp_line (start 0.8 -0.4) (end 0.8 0.4) (layer F.Fab) (width 0.1))
     (fp_line (start -0.8 -0.4) (end 0.8 -0.4) (layer F.Fab) (width 0.1))
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
-    (pad 2 smd roundrect (at 0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 2 smd roundrect (at 0.7875 0 270) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 1 GND))
-    (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 1 smd roundrect (at -0.7875 0 270) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 4 "Net-(C205-Pad1)"))
-    (model ${KIPRJMOD}/shapes3D/C_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1863,18 +1942,18 @@
   )
 
   (module Capacitor_SMD:C_0603_1608Metric (layer F.Cu) (tedit 5B301BBE) (tstamp 5FE7C978)
-    (at 107.4675 94.996)
+    (at 109.728 96.7485 90)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5FDEAABE/5FE64640)
     (attr smd)
-    (fp_text reference C206 (at 0 -1.43) (layer F.SilkS)
+    (fp_text reference C206 (at 0 -1.43 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 20pF (at 0 1.43) (layer F.Fab)
+    (fp_text value 20pF (at 0 1.43 90) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text user %R (at 0 0) (layer F.Fab)
+    (fp_text user %R (at 0 0 90) (layer F.Fab)
       (effects (font (size 0.4 0.4) (thickness 0.06)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -1887,11 +1966,11 @@
     (fp_line (start 0.8 -0.4) (end 0.8 0.4) (layer F.Fab) (width 0.1))
     (fp_line (start -0.8 -0.4) (end 0.8 -0.4) (layer F.Fab) (width 0.1))
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
-    (pad 2 smd roundrect (at 0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 2 smd roundrect (at 0.7875 0 90) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 1 GND))
-    (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+    (pad 1 smd roundrect (at -0.7875 0 90) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 5 "Net-(C206-Pad1)"))
-    (model ${KIPRJMOD}/shapes3D/C_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1927,7 +2006,7 @@
       (net 6 +5V))
     (pad 1 smd roundrect (at -0.7875 0 180) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 1 GND))
-    (model ${KIPRJMOD}/shapes3D/C_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1935,7 +2014,7 @@
   )
 
   (module Capacitor_SMD:C_0603_1608Metric (layer F.Cu) (tedit 5B301BBE) (tstamp 5FEA1CC5)
-    (at 146.05 72.2375 270)
+    (at 146.812 72.644 270)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5FD135B5/5FD2E227)
@@ -1963,7 +2042,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -0.7875 0 270) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/C_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2018,7 +2097,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -4.4 0 180) (size 4.6 2.1) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.119048)
       (net 7 +9V))
-    (model ${KIPRJMOD}/shapes3D/C_Elec_10x10.2.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_Elec_10x10.2.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2054,7 +2133,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -0.7875 0 270) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 6 +5V))
-    (model ${KIPRJMOD}/shapes3D/C_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2109,7 +2188,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -4.4 0 270) (size 4.6 2.1) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.119048)
       (net 6 +5V))
-    (model ${KIPRJMOD}/shapes3D/C_Elec_10x10.2.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_Elec_10x10.2.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2145,7 +2224,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -0.7875 0 90) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/C_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2200,7 +2279,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -4.4 0 180) (size 4.6 2.1) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.119048)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/C_Elec_10x10.2.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_Elec_10x10.2.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2236,7 +2315,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -0.7875 0 270) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/C_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2244,7 +2323,7 @@
   )
 
   (module Capacitor_SMD:C_0603_1608Metric (layer F.Cu) (tedit 5B301BBE) (tstamp 5FE985A8)
-    (at 126.2635 114.3 180)
+    (at 134.62 108.204 180)
     (descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags capacitor)
     (path /5FDBDABC/5FDC174A)
@@ -2272,7 +2351,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -0.7875 0 180) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/C_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2308,7 +2387,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -0.7875 0 270) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/C_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2362,7 +2441,7 @@
       (net 9 /uC/SWDCLK))
     (pad 1 thru_hole rect (at 0 0 90) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 8 /uC/uC-RST))
-    (model ${KIPRJMOD}/shapes3D/PinHeader_2x04_P2.54mm_Vertical.wrl
+    (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_2x04_P2.54mm_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2408,7 +2487,7 @@
     (pad 2 thru_hole oval (at 0 2.54) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask))
     (pad 1 thru_hole rect (at 0 0) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 1 GND))
-    (model ${KIPRJMOD}/shapes3D/PinHeader_1x06_P2.54mm_Vertical.wrl
+    (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x06_P2.54mm_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2622,7 +2701,7 @@
       (net 24 /I2C-SCL))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/R_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2658,7 +2737,7 @@
       (net 25 /I2C-SDA))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/R_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2694,7 +2773,7 @@
       (net 8 /uC/uC-RST))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/R_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2730,7 +2809,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 26 /uC/BOOT0))
-    (model ${KIPRJMOD}/shapes3D/R_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2766,7 +2845,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 27 /uC/BOOT1))
-    (model ${KIPRJMOD}/shapes3D/R_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2802,7 +2881,7 @@
       (net 28 /uC/HW-Version))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/R_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2838,7 +2917,7 @@
       (net 1 GND))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 28 /uC/HW-Version))
-    (model ${KIPRJMOD}/shapes3D/R_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2874,7 +2953,7 @@
       (net 29 /Mechanics/HAL-A))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/R_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2910,7 +2989,7 @@
       (net 30 /Mechanics/HAL-B))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/R_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2918,7 +2997,7 @@
   )
 
   (module Resistor_SMD:R_0603_1608Metric (layer F.Cu) (tedit 5B301BBD) (tstamp 5FE7CBF5)
-    (at 142.011501 70.0025 90)
+    (at 146.304 68.58 90)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags resistor)
     (path /5FD135B5/5FD2E221)
@@ -2946,7 +3025,7 @@
       (net 16 "/Com Bus/RS485-A"))
     (pad 1 smd roundrect (at -0.7875 0 90) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 17 "/Com Bus/RS485-B"))
-    (model ${KIPRJMOD}/shapes3D/R_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2982,7 +3061,7 @@
       (net 18 /WiFi/ESP-EN))
     (pad 1 smd roundrect (at -0.7875 0 270) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/R_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3018,7 +3097,7 @@
       (net 22 /WiFi/ESP-IO0))
     (pad 1 smd roundrect (at -0.7875 0 270) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/R_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3026,7 +3105,7 @@
   )
 
   (module Resistor_SMD:R_0603_1608Metric (layer F.Cu) (tedit 5B301BBD) (tstamp 5FE98704)
-    (at 131.191 116.6875 270)
+    (at 128.524 102.616 270)
     (descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
     (tags resistor)
     (path /5FDBDABC/5FDCBDD7)
@@ -3054,7 +3133,7 @@
       (net 31 "/RTC and Memory/RCLK"))
     (pad 1 smd roundrect (at -0.7875 0 270) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/R_0603_1608Metric.wrl
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3196,7 +3275,7 @@
     (pad 2 smd roundrect (at -4.1625 -2.25) (size 1.475 0.3) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
     (pad 1 smd roundrect (at -4.1625 -2.75) (size 1.475 0.3) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 23 "Net-(JP203-Pad2)"))
-    (model ${KIPRJMOD}/shapes3D/LQFP-48_7x7mm_P0.5mm.wrl
+    (model ${KISYS3DMOD}/Package_QFP.3dshapes/LQFP-48_7x7mm_P0.5mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3250,7 +3329,7 @@
       (net 35 /Mechanics/MA3))
     (pad 4 thru_hole circle (at 0 22.86 270) (size 1.8 1.8) (drill 0.8) (layers *.Cu *.Mask)
       (net 38 /Mechanics/MA4))
-    (model ${KIPRJMOD}/shapes3D/vid28-05.step
+    (model ${MVL3D}/mech.3dshapes/vid28-05.step
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 -90))
@@ -3317,7 +3396,7 @@
       (net 40 /Mechanics/M-B-Step))
     (pad 1 smd rect (at -3.15 -4.45) (size 1.3 0.8) (layers F.Cu F.Paste F.Mask)
       (net 39 /Mechanics/M-B-CW))
-    (model ${KIPRJMOD}/shapes3D/SOP-16_4.4x10.4mm_P1.27mm.wrl
+    (model ${KISYS3DMOD}/Package_SO.3dshapes/SOP-16_4.4x10.4mm_P1.27mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3360,7 +3439,7 @@
       (net 6 +5V))
     (pad 2 smd rect (at 3.15 0 180) (size 2 3.8) (layers F.Cu F.Paste F.Mask)
       (net 6 +5V))
-    (model ${KIPRJMOD}/shapes3D/SOT-223.wrl
+    (model ${KISYS3DMOD}/Package_TO_SOT_SMD.3dshapes/SOT-223.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3403,7 +3482,7 @@
       (net 3 +3V3))
     (pad 2 smd rect (at 3.15 0) (size 2 3.8) (layers F.Cu F.Paste F.Mask)
       (net 3 +3V3))
-    (model ${KIPRJMOD}/shapes3D/SOT-223.wrl
+    (model ${KISYS3DMOD}/Package_TO_SOT_SMD.3dshapes/SOT-223.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3551,7 +3630,7 @@
     (pad 1 smd rect (at -8.5 -8.255 180) (size 2 0.9) (layers F.Cu F.Paste F.Mask)
       (net 1 GND))
     (pad 39 smd rect (at -1 -0.755 180) (size 5 5) (layers F.Cu F.Paste F.Mask))
-    (model ${KIPRJMOD}/shapes3D/ESP32-WROOM-32.wrl
+    (model ${KISYS3DMOD}/RF_Module.3dshapes/ESP32-WROOM-32.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3606,14 +3685,15 @@
       (net 19 "Net-(J601-Pad2)"))
     (pad 1 thru_hole rect (at 0 0) (size 1 1) (drill 0.65) (layers *.Cu *.Mask)
       (net 18 /WiFi/ESP-EN))
-    (model ${KIPRJMOD}/shapes3D/PinHeader_2x03_P1.27mm_Vertical.wrl
+    (model ${KISYS3DMOD}/Connector_PinHeader_1.27mm.3dshapes/PinHeader_2x03_P1.27mm_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
   )
 
-  (gr_circle (center 150 100) (end 193 100) (layer Dwgs.User) (width 0.12))
-  (gr_circle (center 150 100) (end 195 100) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 150 100) (end 106.7 125) (layer Cmts.User) (width 0.12))
+  (gr_circle (center 150 100) (end 195 100) (layer Cmts.User) (width 0.12))
+  (gr_circle (center 150 100) (end 197 100) (layer Edge.Cuts) (width 0.05))
 
 )
