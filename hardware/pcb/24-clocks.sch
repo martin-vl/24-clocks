@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:24-clocks-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -149,7 +148,7 @@ S 1750 1700 1150 900
 U 5FD84F98
 F0 "Power Supply" 50
 F1 "24-c-supply.sch" 50
-F2 "+9V" I L 1750 1950 50 
+F2 "+7V" I L 1750 1950 50 
 F3 "+5V" O R 2900 1950 50 
 F4 "+3V3" O R 2900 2300 50 
 $EndSheet

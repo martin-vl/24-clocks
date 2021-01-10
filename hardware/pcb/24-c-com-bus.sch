@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:24-clocks-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -306,9 +305,11 @@ Wire Wire Line
 Wire Wire Line
 	4450 3150 5250 3150
 $Comp
-L SparkFun-DiscreteSemi:PESD1CAN D401
+L 24-clocks-rescue:PESD1CAN-SparkFun-DiscreteSemi D401
 U 1 1 5FEA3168
 P 6900 3550
+AR Path="/5FEA3168" Ref="D401"  Part="1" 
+AR Path="/5FD135B5/5FEA3168" Ref="D401"  Part="1" 
 F 0 "D401" V 6858 3778 45  0000 L CNN
 F 1 "PESD1CAN" V 6942 3778 45  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 6900 3900 20  0001 C CNN

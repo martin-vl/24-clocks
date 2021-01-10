@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:24-clocks-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -194,7 +193,7 @@ Wire Wire Line
 Wire Wire Line
 	4450 3150 4700 3150
 Text HLabel 4300 2850 0    50   Input ~ 0
-+9V
++7V
 Text HLabel 6350 2850 2    50   Output ~ 0
 +5V
 Text HLabel 8000 2850 2    50   Output ~ 0

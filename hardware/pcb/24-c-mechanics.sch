@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:24-clocks-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -39,7 +38,7 @@ AR Path="/5FCDA719/5FCE4F23" Ref="U301"  Part="1"
 F 0 "U301" H 8050 1865 50  0000 C CNN
 F 1 "VID28-05" H 8050 1774 50  0000 C CNN
 F 2 "mvl-footprints:vid_28_05" H 8050 1150 50  0001 C CNN
-F 3 "" H 7700 1500 50  0001 C CNN
+F 3 "http://www.vidmotion.com.cn/UploadFile/pdf/product/20090905105654VID28-05%20V2070829.pdf" H 7700 1500 50  0001 C CNN
 F 4 "-MASTER" H 8050 1500 50  0001 C CNN "Config"
 	1    8050 1500
 	1    0    0    -1  
@@ -53,7 +52,7 @@ AR Path="/5FCDA719/5FCE4F29" Ref="U301"  Part="2"
 F 0 "U301" H 8050 2615 50  0000 C CNN
 F 1 "VID28-05" H 8050 2524 50  0000 C CNN
 F 2 "mvl-footprints:vid_28_05" H 8050 1900 50  0001 C CNN
-F 3 "" H 7700 2250 50  0001 C CNN
+F 3 "http://www.vidmotion.com.cn/UploadFile/pdf/product/20090905105654VID28-05%20V2070829.pdf" H 7700 2250 50  0001 C CNN
 F 4 "-MASTER" H 8050 2250 50  0001 C CNN "Config"
 	2    8050 2250
 	1    0    0    -1  
