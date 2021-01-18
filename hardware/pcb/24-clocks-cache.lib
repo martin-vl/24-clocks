@@ -78,12 +78,11 @@ ENDDEF
 #
 # 24-clocks-rescue_PESD1CAN-SparkFun-DiscreteSemi
 #
-DEF 24-clocks-rescue_PESD1CAN-SparkFun-DiscreteSemi D 0 40 N Y 1 L N
+DEF 24-clocks-rescue_PESD1CAN-SparkFun-DiscreteSemi D 0 40 N Y 1 F N
 F0 "D" -200 250 45 H V L BNN
 F1 "24-clocks-rescue_PESD1CAN-SparkFun-DiscreteSemi" -200 -300 45 H V L BNN
 F2 "SOT23-3" 0 350 20 H I C CNN
 F3 "" 0 0 50 H I C CNN
-F4 "DIO-12501" 0 400 60 H V C CNN
 $FPLIST
  *SOT23-3*
 $ENDFPLIST
@@ -701,18 +700,18 @@ X +5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power_+9V
+# power_+7.5V
 #
-DEF power_+9V #PWR 0 0 Y Y 1 F P
+DEF power_+7.5V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+9V" 0 140 50 H V C CNN
+F1 "power_+7.5V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
 P 2 0 1 0 -30 50 0 100 N
 P 2 0 1 0 0 0 0 100 N
 P 2 0 1 0 0 100 30 50 N
-X +9V 1 0 0 0 U 50 50 1 1 W N
+X +7.5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #

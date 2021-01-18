@@ -684,7 +684,7 @@ Wire Wire Line
 	1400 7000 1400 6950
 Wire Wire Line
 	1400 6250 1400 6200
-Text Label 2000 6600 2    50   ~ 0
+Text Label 2100 6600 2    50   ~ 0
 HW-Version
 Wire Wire Line
 	6300 3100 6900 3100
@@ -1001,19 +1001,6 @@ Wire Wire Line
 	8450 4900 8350 4900
 Wire Wire Line
 	8350 4900 8350 4800
-$Comp
-L Connector:TestPoint TP211
-U 1 1 5FF8AEC1
-P 2100 6500
-F 0 "TP211" H 2158 6572 50  0000 L CNN
-F 1 "HW-Version" H 2158 6527 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 2300 6500 50  0001 C CNN
-F 3 "~" H 2300 6500 50  0001 C CNN
-	1    2100 6500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2100 6500 2100 6600
 Wire Wire Line
 	1400 6600 2100 6600
 $Comp

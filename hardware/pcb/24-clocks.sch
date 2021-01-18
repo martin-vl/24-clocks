@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:+9V #PWR0101
-U 1 1 5FC806BB
-P 1400 1850
-F 0 "#PWR0101" H 1400 1700 50  0001 C CNN
-F 1 "+9V" H 1415 2023 50  0000 C CNN
-F 2 "" H 1400 1850 50  0001 C CNN
-F 3 "" H 1400 1850 50  0001 C CNN
-	1    1400 1850
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR0102
 U 1 1 5FC81029
 P 3200 1850
@@ -257,6 +246,17 @@ F 1 "MountingHole" H 750 7555 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 650 7600 50  0001 C CNN
 F 3 "~" H 650 7600 50  0001 C CNN
 	1    650  7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+7.5V #PWR0101
+U 1 1 60073D60
+P 1400 1850
+F 0 "#PWR0101" H 1400 1700 50  0001 C CNN
+F 1 "+7.5V" H 1415 2023 50  0000 C CNN
+F 2 "" H 1400 1850 50  0001 C CNN
+F 3 "" H 1400 1850 50  0001 C CNN
+	1    1400 1850
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
