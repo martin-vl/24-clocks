@@ -78,12 +78,11 @@ ENDDEF
 #
 # PESD1CAN-SparkFun-DiscreteSemi
 #
-DEF PESD1CAN-SparkFun-DiscreteSemi D 0 40 N Y 1 L N
+DEF PESD1CAN-SparkFun-DiscreteSemi D 0 40 N Y 1 F N
 F0 "D" -200 250 45 H V L BNN
 F1 "PESD1CAN-SparkFun-DiscreteSemi" -200 -300 45 H V L BNN
 F2 "SOT23-3" 0 350 20 H I C CNN
 F3 "" 0 0 50 H I C CNN
-F4 "DIO-12501" 0 400 60 H V C CNN
 $FPLIST
  *SOT23-3*
 $ENDFPLIST
