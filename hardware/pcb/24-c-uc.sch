@@ -519,7 +519,6 @@ Program connector
 NoConn ~ 6300 3000
 NoConn ~ 6300 3800
 NoConn ~ 6300 4100
-NoConn ~ 5000 4200
 NoConn ~ 5000 3900
 NoConn ~ 5000 3500
 NoConn ~ 5000 3400
@@ -1020,4 +1019,14 @@ Wire Wire Line
 	4000 2450 4000 2550
 Wire Wire Line
 	3600 2150 3600 2550
+Text HLabel 2400 3850 0    50   Input ~ 0
+RTC-CLK
+Wire Wire Line
+	2400 3850 3000 3850
+Text Label 3000 3850 2    50   ~ 0
+RTC-CLK
+Wire Wire Line
+	4400 4200 5000 4200
+Text Label 4400 4200 0    50   ~ 0
+RTC-CLK
 $EndSCHEMATC

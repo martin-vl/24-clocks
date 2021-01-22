@@ -239,7 +239,7 @@ Wire Wire Line
 	6950 5500 7500 5500
 Connection ~ 6950 5500
 Text Label 7500 5500 2    50   ~ 0
-RCLK
+RTC-CLK
 Wire Wire Line
 	5900 4550 5900 4750
 $Comp
@@ -423,4 +423,8 @@ Wire Wire Line
 Connection ~ 6650 4450
 Wire Wire Line
 	6600 4900 6600 4850
+Text Label 6250 4450 0    50   ~ 0
+Vbat
+Text HLabel 7500 5500 2    50   Output ~ 0
+RTC-CLK
 $EndSCHEMATC
