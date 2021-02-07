@@ -64,14 +64,12 @@ jobs:
       with:
         find: "[GITHASH]"
         replace: "${{ github.head_ref }}.${{ github.sha }}"
-        include: "*.kicad_pcb"
 
     - name: Insert date
       uses: jacobtomlinson/gha-find-replace@master
       with:
         find: "[dd-mm-yyyy]"
         replace: "$(date +'%d-%m-%Y')"
-        include: "*.kicad_pcb"
     
     - name: Run schematic stuff
       run: |
