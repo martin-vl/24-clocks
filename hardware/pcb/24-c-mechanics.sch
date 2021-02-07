@@ -37,7 +37,7 @@ AR Path="/5FCE4F23" Ref="U?"  Part="1"
 AR Path="/5FCDA719/5FCE4F23" Ref="U301"  Part="1" 
 F 0 "U301" H 8050 1865 50  0000 C CNN
 F 1 "VID28-05" H 8050 1774 50  0000 C CNN
-F 2 "mvl-footprints:vid_28_05" H 8050 1150 50  0001 C CNN
+F 2 "mvl-footprints:BK30D-R5" H 8050 1150 50  0001 C CNN
 F 3 "http://www.vidmotion.com.cn/UploadFile/pdf/product/20090905105654VID28-05%20V2070829.pdf" H 7700 1500 50  0001 C CNN
 F 4 "-MASTER" H 8050 1500 50  0001 C CNN "Config"
 	1    8050 1500
@@ -51,7 +51,7 @@ AR Path="/5FCE4F29" Ref="U?"  Part="2"
 AR Path="/5FCDA719/5FCE4F29" Ref="U301"  Part="2" 
 F 0 "U301" H 8050 2615 50  0000 C CNN
 F 1 "VID28-05" H 8050 2524 50  0000 C CNN
-F 2 "mvl-footprints:vid_28_05" H 8050 1900 50  0001 C CNN
+F 2 "mvl-footprints:BK30D-R5" H 8050 1900 50  0001 C CNN
 F 3 "http://www.vidmotion.com.cn/UploadFile/pdf/product/20090905105654VID28-05%20V2070829.pdf" H 7700 2250 50  0001 C CNN
 F 4 "-MASTER" H 8050 2250 50  0001 C CNN "Config"
 	2    8050 2250
