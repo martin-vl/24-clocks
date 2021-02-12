@@ -1,13 +1,12 @@
 EESchema Schematic File Version 4
-LIBS:24-clocks-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 7
 Title "24 Clocks"
-Date "2020-12-06"
-Rev "V0.x"
+Date "GITDATE"
+Rev "GITHASH"
 Comp "Martin van Leussen"
 Comment1 ""
 Comment2 ""

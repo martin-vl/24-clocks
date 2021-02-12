@@ -1,30 +1,18 @@
 EESchema Schematic File Version 4
-LIBS:24-clocks-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 7
 Title "24 Clocks"
-Date "2020-12-06"
-Rev "V0.x"
+Date "GITDATE"
+Rev "GITHASH"
 Comp "Martin van Leussen"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:+9V #PWR0101
-U 1 1 5FC806BB
-P 1400 1850
-F 0 "#PWR0101" H 1400 1700 50  0001 C CNN
-F 1 "+9V" H 1415 2023 50  0000 C CNN
-F 2 "" H 1400 1850 50  0001 C CNN
-F 3 "" H 1400 1850 50  0001 C CNN
-	1    1400 1850
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+5V #PWR0102
 U 1 1 5FC81029
@@ -103,7 +91,7 @@ I2C-SCL
 Text Label 3850 5350 0    50   ~ 0
 I2C-SDA
 $Sheet
-S 5400 1700 1750 3900
+S 5400 1700 1750 4000
 U 5FDEAABE
 F0 "uC" 50
 F1 "24-c-uc.sch" 50
@@ -121,6 +109,7 @@ F12 "uC-WiFi-Tx" O R 7150 5350 50
 F13 "uC-WiFi-Rx" I R 7150 5200 50 
 F14 "I2C-SCL" O L 5400 5200 50 
 F15 "I2C-SDA" B L 5400 5350 50 
+F16 "RTC-CLK" I L 5400 5500 50 
 $EndSheet
 $Sheet
 S 8300 1700 1100 1250
@@ -149,7 +138,7 @@ S 1750 1700 1150 900
 U 5FD84F98
 F0 "Power Supply" 50
 F1 "24-c-supply.sch" 50
-F2 "+9V" I L 1750 1950 50 
+F2 "+7V" I L 1750 1950 50 
 F3 "+5V" O R 2900 1950 50 
 F4 "+3V3" O R 2900 2300 50 
 $EndSheet
@@ -174,12 +163,13 @@ F2 "uC-WiFi-Tx" I L 8300 5350 50
 F3 "uC-WiFi-Rx" O L 8300 5200 50 
 $EndSheet
 $Sheet
-S 2600 4950 1100 650 
+S 2600 4950 1100 750 
 U 5FDBDABC
 F0 "RTC and Memory" 50
 F1 "24-c-rtc-memory.sch" 50
 F2 "I2C-SDA" B R 3700 5350 50 
 F3 "I2C-SCL" I R 3700 5200 50 
+F4 "RTC-CLK" O R 3700 5500 50 
 $EndSheet
 Wire Wire Line
 	7150 1900 8300 1900
@@ -216,4 +206,61 @@ Wire Wire Line
 	4750 5350 5400 5350
 Wire Wire Line
 	3700 5350 4750 5350
+$Comp
+L Mechanical:MountingHole H101
+U 1 1 5FEC3F65
+P 650 7000
+F 0 "H101" H 750 7046 50  0000 L CNN
+F 1 "MountingHole" H 750 6955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 650 7000 50  0001 C CNN
+F 3 "~" H 650 7000 50  0001 C CNN
+	1    650  7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H102
+U 1 1 5FEC5189
+P 650 7200
+F 0 "H102" H 750 7246 50  0000 L CNN
+F 1 "MountingHole" H 750 7155 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 650 7200 50  0001 C CNN
+F 3 "~" H 650 7200 50  0001 C CNN
+	1    650  7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H103
+U 1 1 5FEC5459
+P 650 7400
+F 0 "H103" H 750 7446 50  0000 L CNN
+F 1 "MountingHole" H 750 7355 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 650 7400 50  0001 C CNN
+F 3 "~" H 650 7400 50  0001 C CNN
+	1    650  7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H104
+U 1 1 5FEC567F
+P 650 7600
+F 0 "H104" H 750 7646 50  0000 L CNN
+F 1 "MountingHole" H 750 7555 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 650 7600 50  0001 C CNN
+F 3 "~" H 650 7600 50  0001 C CNN
+	1    650  7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+7.5V #PWR0101
+U 1 1 60073D60
+P 1400 1850
+F 0 "#PWR0101" H 1400 1700 50  0001 C CNN
+F 1 "+7.5V" H 1415 2023 50  0000 C CNN
+F 2 "" H 1400 1850 50  0001 C CNN
+F 3 "" H 1400 1850 50  0001 C CNN
+	1    1400 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 5500 5400 5500
 $EndSCHEMATC

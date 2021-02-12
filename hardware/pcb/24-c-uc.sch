@@ -1,13 +1,12 @@
 EESchema Schematic File Version 4
-LIBS:24-clocks-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 7
 Title "24 Clocks"
-Date "2020-12-06"
-Rev "V0.x"
+Date "GITDATE"
+Rev "GITHASH"
 Comp "Martin van Leussen"
 Comment1 ""
 Comment2 ""
@@ -457,8 +456,6 @@ Text Label 9100 4800 0    50   ~ 0
 uC-Debug-Rx
 Text Label 9100 4700 0    50   ~ 0
 uC-Debug-Tx
-Text Notes 4800 6900 0    118  ~ 0
-Check caps
 $Comp
 L Connector_Generic:Conn_01x06 J202
 U 1 1 5FD3FEB8
@@ -520,7 +517,6 @@ Program connector
 NoConn ~ 6300 3000
 NoConn ~ 6300 3800
 NoConn ~ 6300 4100
-NoConn ~ 5000 4200
 NoConn ~ 5000 3900
 NoConn ~ 5000 3500
 NoConn ~ 5000 3400
@@ -563,27 +559,25 @@ $EndComp
 Wire Wire Line
 	3650 2150 3600 2150
 Wire Wire Line
-	3600 2150 3600 2350
-Wire Wire Line
 	3600 2550 3650 2550
 Wire Wire Line
 	3950 2550 4000 2550
 Wire Wire Line
-	4600 2550 4600 2400
+	4750 2550 4750 2400
 Wire Wire Line
-	4600 2400 5000 2400
+	4750 2400 5000 2400
 Wire Wire Line
-	5000 2300 4600 2300
+	5000 2300 4750 2300
 Wire Wire Line
-	4600 2300 4600 2150
+	4750 2300 4750 2150
 Wire Wire Line
-	4600 2150 4000 2150
+	4750 2150 4000 2150
 Connection ~ 4000 2150
 Wire Wire Line
 	4000 2150 3950 2150
 Connection ~ 4000 2550
 Wire Wire Line
-	4000 2550 4600 2550
+	4000 2550 4750 2550
 $Comp
 L power:GND #PWR?
 U 1 1 5FE74DAF
@@ -687,7 +681,7 @@ Wire Wire Line
 	1400 7000 1400 6950
 Wire Wire Line
 	1400 6250 1400 6200
-Text Label 2000 6600 2    50   ~ 0
+Text Label 2100 6600 2    50   ~ 0
 HW-Version
 Wire Wire Line
 	6300 3100 6900 3100
@@ -1004,29 +998,16 @@ Wire Wire Line
 	8450 4900 8350 4900
 Wire Wire Line
 	8350 4900 8350 4800
-$Comp
-L Connector:TestPoint TP211
-U 1 1 5FF8AEC1
-P 2100 6500
-F 0 "TP211" H 2158 6572 50  0000 L CNN
-F 1 "HW-Version" H 2158 6527 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 2300 6500 50  0001 C CNN
-F 3 "~" H 2300 6500 50  0001 C CNN
-	1    2100 6500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2100 6500 2100 6600
 Wire Wire Line
 	1400 6600 2100 6600
 $Comp
-L Device:Crystal_GND23_Small Y201
+L Device:Crystal_Small Y201
 U 1 1 5FE749A7
 P 4000 2350
-F 0 "Y201" V 3954 2494 50  0000 L CNN
-F 1 "8MHz" V 4045 2494 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_5032-4Pin_5.0x3.2mm" H 4000 2350 50  0001 C CNN
-F 3 "~" H 4000 2350 50  0001 C CNN
+F 0 "Y201" V 3950 2450 50  0000 L CNN
+F 1 "NX3225GD 8MHz" V 4050 2450 50  0000 L CNN
+F 2 "mvl-footprints:Crystal_SMD_3225-2Pin_3.2x2.5mm" H 4000 2350 50  0001 C CNN
+F 3 "https://www.ndk.com/images/products/catalog/c_NX3225GD_e.pdf" H 4000 2350 50  0001 C CNN
 	1    4000 2350
 	0    1    1    0   
 $EndComp
@@ -1035,23 +1016,15 @@ Wire Wire Line
 Wire Wire Line
 	4000 2450 4000 2550
 Wire Wire Line
-	3900 2350 3600 2350
-Connection ~ 3600 2350
+	3600 2150 3600 2550
+Text HLabel 2400 3850 0    50   Input ~ 0
+RTC-CLK
 Wire Wire Line
-	3600 2350 3600 2550
-$Comp
-L power:GND #PWR?
-U 1 1 5FE85E24
-P 4100 2600
-AR Path="/5FE85E24" Ref="#PWR?"  Part="1" 
-AR Path="/5FDEAABE/5FE85E24" Ref="#PWR0108"  Part="1" 
-F 0 "#PWR0108" H 4100 2350 50  0001 C CNN
-F 1 "GND" H 4105 2427 50  0000 C CNN
-F 2 "" H 4100 2600 50  0001 C CNN
-F 3 "" H 4100 2600 50  0001 C CNN
-	1    4100 2600
-	1    0    0    -1  
-$EndComp
+	2400 3850 3000 3850
+Text Label 3000 3850 2    50   ~ 0
+RTC-CLK
 Wire Wire Line
-	4100 2600 4100 2350
+	4400 4200 5000 4200
+Text Label 4400 4200 0    50   ~ 0
+RTC-CLK
 $EndSCHEMATC

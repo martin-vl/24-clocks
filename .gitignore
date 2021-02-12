@@ -6,3 +6,4 @@ hardware/**/*.dcm
 hardware/**/fp-info-cache
 hardware/**/_autosave*
 **/.DS_Store
+**.log
