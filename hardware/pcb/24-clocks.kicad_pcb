@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 14)
+    (drawings 21)
     (tracks 1103)
     (zones 0)
     (modules 89)
@@ -10,6 +10,13 @@
   )
 
   (page A4)
+  (title_block
+    (title "24 Clocks PCB")
+    (date GITDATE)
+    (rev GITHASH)
+    (company "Martin van Leussen")
+  )
+
   (layers
     (0 F.Cu signal)
     (31 B.Cu signal)
@@ -17,11 +24,11 @@
     (33 F.Adhes user hide)
     (34 B.Paste user hide)
     (35 F.Paste user hide)
-    (36 B.SilkS user)
+    (36 B.SilkS user hide)
     (37 F.SilkS user)
     (38 B.Mask user hide)
     (39 F.Mask user hide)
-    (40 Dwgs.User user hide)
+    (40 Dwgs.User user)
     (41 Cmts.User user hide)
     (42 Eco1.User user hide)
     (43 Eco2.User user hide)
@@ -30,7 +37,7 @@
     (46 B.CrtYd user hide)
     (47 F.CrtYd user hide)
     (48 B.Fab user hide)
-    (49 F.Fab user hide)
+    (49 F.Fab user)
   )
 
   (setup
@@ -60,7 +67,7 @@
     (pad_to_mask_clearance 0)
     (aux_axis_origin 0 0)
     (grid_origin 150 100)
-    (visible_elements FFFDFF7F)
+    (visible_elements FFFFFF7F)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
       (usegerberextensions false)
@@ -238,7 +245,7 @@
     (fp_text reference U301 (at -10.953 0.02 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value VID28-05 (at 19.38 10.93 90) (layer F.Fab)
+    (fp_text value VID28-05 (at 19.38 10.93 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_circle (center 9.88 11.43) (end 10.88 11.43) (layer F.Fab) (width 0.1))
@@ -298,7 +305,7 @@
     (fp_text reference NT701 (at 0 -1.2 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Net-Tie_2 (at 0 1.2 90) (layer F.Fab)
+    (fp_text value Net-Tie_2 (at 0 1.2 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 -0.5) (end -1 0.5) (layer F.CrtYd) (width 0.05))
@@ -320,7 +327,7 @@
     (fp_text reference J202 (at -0.001097 15.108197 27) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value "Debug UART" (at 0 15.03 27) (layer F.Fab)
+    (fp_text value "Debug UART" (at -2.376863 6.343306 117) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.635 -1.27) (end 1.27 -1.27) (layer F.Fab) (width 0.1))
@@ -449,7 +456,7 @@
     (fp_text reference Y201 (at -0.066 2.032 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value "NX3225GD 8MHz" (at 0 2.4 90) (layer F.Fab)
+    (fp_text value "NX3225GD 8MHz" (at 0 2.4 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 2 -1.65) (end 2 1.65) (layer F.CrtYd) (width 0.05))
@@ -485,7 +492,7 @@
     (fp_text reference U702 (at -0.127 3.429) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value DS1307+ (at 0 3.4) (layer F.Fab)
+    (fp_text value DS1307+ (at 0 3.4) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 3.7 -2.7) (end -3.7 -2.7) (layer F.CrtYd) (width 0.05))
@@ -536,7 +543,7 @@
     (fp_text reference U401 (at -2.972 4.331) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MAX3485 (at 0 3.4 90) (layer F.Fab)
+    (fp_text value MAX3485 (at 0 3.4 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 3.7 -2.7) (end -3.7 -2.7) (layer F.CrtYd) (width 0.05))
@@ -587,7 +594,7 @@
     (fp_text reference U701 (at 0 3.696 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 24LC512 (at 0 3.4 90) (layer F.Fab)
+    (fp_text value 24LC512 (at 0 3.4 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 3.7 -2.7) (end -3.7 -2.7) (layer F.CrtYd) (width 0.05))
@@ -637,7 +644,7 @@
     (fp_text reference Y701 (at 0 -3.55) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 32.768kHz (at 0 3.55) (layer F.Fab)
+    (fp_text value 32.768kHz (at 0 3.55) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 4.3 -2.8) (end -4.3 -2.8) (layer F.CrtYd) (width 0.05))
@@ -687,7 +694,7 @@
     (fp_text reference U304 (at 0.096308 3.13519 30) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value AH3572 (at 0 2.5 30) (layer F.Fab)
+    (fp_text value AH3572 (at 0 2.5 30) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.6 1.5) (end 0.6 1.5) (layer Dwgs.User) (width 1))
@@ -743,7 +750,7 @@
     (fp_text reference U303 (at 0.209066 2.965887 30) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value AH3572 (at 0 2.5 30) (layer F.Fab)
+    (fp_text value AH3572 (at 0 2.5 30) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.6 1.5) (end 0.6 1.5) (layer Dwgs.User) (width 1))
@@ -799,7 +806,7 @@
     (fp_text reference J402 (at 9.22 1.156) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value S4B_XH_SM4_TB (at 7.45 -2) (layer F.Fab)
+    (fp_text value S4B_XH_SM4_TB (at 7.45 -2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -7.5 -0.5) (end -7.5 5) (layer F.Fab) (width 0.12))
@@ -861,7 +868,7 @@
     (fp_text reference J401 (at -9.414 0.876) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value S4B_XH_SM4_TB (at 7.45 -2) (layer F.Fab)
+    (fp_text value S4B_XH_SM4_TB (at 7.45 -2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -7.5 -0.5) (end -7.5 5) (layer F.Fab) (width 0.12))
@@ -915,7 +922,7 @@
   )
 
   (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5FEA821C)
-    (at 128.524 135.128)
+    (at 128 135)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (path /5FEC567F)
@@ -923,7 +930,7 @@
     (fp_text reference H104 (at 0 -4.2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MountingHole (at 0 4.2) (layer F.Fab)
+    (fp_text value MountingHole (at 0 4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
@@ -943,7 +950,7 @@
     (fp_text reference H103 (at 0 -4.2) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MountingHole (at 0 4.2) (layer F.Fab)
+    (fp_text value MountingHole (at 0 4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
@@ -955,7 +962,7 @@
   )
 
   (module MountingHole:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 56D1B4CB) (tstamp 5FEA820C)
-    (at 171.704 135.128)
+    (at 172 135)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (path /5FEC5189)
@@ -963,7 +970,7 @@
     (fp_text reference H102 (at 0 -4.2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MountingHole (at 0 4.2) (layer F.Fab)
+    (fp_text value MountingHole (at 0 4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
@@ -983,7 +990,7 @@
     (fp_text reference H101 (at 0 -4.2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MountingHole (at 0 4.2) (layer F.Fab)
+    (fp_text value MountingHole (at 0 4.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_circle (center 0 0) (end 3.45 0) (layer F.CrtYd) (width 0.05))
@@ -1003,7 +1010,7 @@
     (fp_text reference D401 (at -2.616 0.368 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value PESD1CAN (at 0 2.5 90) (layer F.Fab)
+    (fp_text value PESD1CAN (at 0 2.5 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.76 1.58) (end -0.7 1.58) (layer F.SilkS) (width 0.12))
@@ -1651,7 +1658,7 @@
     (fp_text reference BT701 (at 0 12 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value CR2032 (at 0 5 90) (layer F.Fab)
+    (fp_text value CR2032 (at -0.055 1.918 90) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -15.95 -28.4) (end -15.95 3) (layer F.CrtYd) (width 0.05))
@@ -1699,7 +1706,7 @@
     (fp_text reference C201 (at 0 -1.43 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -1735,7 +1742,7 @@
     (fp_text reference C202 (at 0 -1.43 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -1771,7 +1778,7 @@
     (fp_text reference C203 (at 0 -1.43) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.43) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.43) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -1807,7 +1814,7 @@
     (fp_text reference C204 (at 0 -3.175) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.43) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -1843,7 +1850,7 @@
     (fp_text reference C205 (at -0.0255 1.524 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 20pF (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 20pF (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -1879,7 +1886,7 @@
     (fp_text reference C206 (at -1.3715 -1.524 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 20pF (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 20pF (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -1915,7 +1922,7 @@
     (fp_text reference C301 (at -0.114 1.575) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.43) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.43) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -1951,7 +1958,7 @@
     (fp_text reference C401 (at 2.286 1.016 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -1987,7 +1994,7 @@
     (fp_text reference C501 (at 0 -6.2) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 22uF (at 0 6.2) (layer F.Fab)
+    (fp_text value 22uF (at 0 6.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -6.95 1.3) (end -5.4 1.3) (layer F.CrtYd) (width 0.05))
@@ -2042,7 +2049,7 @@
     (fp_text reference C502 (at 0 -1.43 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2078,7 +2085,7 @@
     (fp_text reference C503 (at 0 -6.2) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 22uF (at 0 6.2) (layer F.Fab)
+    (fp_text value 22uF (at 0 6.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -6.95 1.3) (end -5.4 1.3) (layer F.CrtYd) (width 0.05))
@@ -2133,7 +2140,7 @@
     (fp_text reference C504 (at 0 -1.43 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2169,7 +2176,7 @@
     (fp_text reference C601 (at 0 -6.2) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 22uF (at 0 6.2) (layer F.Fab)
+    (fp_text value 22uF (at 0 6.2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -6.95 1.3) (end -5.4 1.3) (layer F.CrtYd) (width 0.05))
@@ -2224,7 +2231,7 @@
     (fp_text reference C602 (at 0.305 -1.664 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2260,7 +2267,7 @@
     (fp_text reference C701 (at 0 1.524 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2296,7 +2303,7 @@
     (fp_text reference C702 (at 3.556 0.254) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.43) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.43) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2386,7 +2393,7 @@
     (fp_text reference JP201 (at 0 -1.8 157) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Jumper_NC_Small (at 0 1.9 157) (layer F.Fab)
+    (fp_text value Jumper_NC_Small (at 0 1.9 157) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_poly (pts (xy 0.25 -0.3) (xy -0.25 -0.3) (xy -0.25 0.3) (xy 0.25 0.3)) (layer F.Cu) (width 0))
@@ -2431,7 +2438,7 @@
     (fp_text reference JP202 (at -0.781326 -1.82346 27) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Jumper_NO_Small (at 0 1.9 27) (layer F.Fab)
+    (fp_text value Jumper_NO_Small (at 0 1.9 27) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 1.25) (end -1.65 1.25) (layer F.CrtYd) (width 0.05))
@@ -2475,7 +2482,7 @@
     (fp_text reference JP203 (at 0.015 -3.571) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Jumper_NO_Small (at 0 1.9) (layer F.Fab)
+    (fp_text value Jumper_NO_Small (at 0 1.9) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 1.25) (end -1.65 1.25) (layer F.CrtYd) (width 0.05))
@@ -2519,7 +2526,7 @@
     (fp_text reference JP601 (at -2.286 -1.854) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Jumper_NC_Small (at 0 1.9) (layer F.Fab)
+    (fp_text value Jumper_NC_Small (at 0 1.9) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_poly (pts (xy 0.25 -0.3) (xy -0.25 -0.3) (xy -0.25 0.3) (xy 0.25 0.3)) (layer F.Cu) (width 0))
@@ -2564,7 +2571,7 @@
     (fp_text reference R101 (at 3.302 0.254) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 5k (at 0 1.43) (layer F.Fab)
+    (fp_text value 5k (at 0 1.43) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2600,7 +2607,7 @@
     (fp_text reference R102 (at 0 1.524) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 5k (at 0 1.43) (layer F.Fab)
+    (fp_text value 5k (at 0 1.43) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2636,7 +2643,7 @@
     (fp_text reference R201 (at -3.81 0 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 4k7 (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 4k7 (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2672,7 +2679,7 @@
     (fp_text reference R202 (at 2.286 0 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10k (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 10k (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2708,7 +2715,7 @@
     (fp_text reference R203 (at 0 -1.43 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10k (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 10k (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2744,7 +2751,7 @@
     (fp_text reference R204 (at 2.4385 0 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10k (at 0 1.43) (layer F.Fab)
+    (fp_text value 10k (at 0 1.43) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2780,7 +2787,7 @@
     (fp_text reference R205 (at 2.6415 0.381 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10k (at 0 1.43) (layer F.Fab)
+    (fp_text value 10k (at 0 1.43) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2816,7 +2823,7 @@
     (fp_text reference R301 (at 0.1525 -1.43 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10k (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 10k (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2852,7 +2859,7 @@
     (fp_text reference R302 (at -3.4035 -0.127 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10k (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 10k (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2888,7 +2895,7 @@
     (fp_text reference R401 (at 2.616 0.648 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 120E (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 120E (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2924,7 +2931,7 @@
     (fp_text reference R601 (at 1.6005 -2.807 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10k (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 10k (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2960,7 +2967,7 @@
     (fp_text reference R602 (at -2.3365 -0.902 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10k (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 10k (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -2996,7 +3003,7 @@
     (fp_text reference R701 (at 0 -1.43 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10k (at 0 1.43 90) (layer F.Fab)
+    (fp_text value 10k (at 0 1.43 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -3032,7 +3039,7 @@
     (fp_text reference U201 (at 0 -5.85) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value STM32F103C8Tx (at 0 5.85) (layer F.Fab)
+    (fp_text value STM32F103C8Tx (at 0 5.85) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 5.15 3.15) (end 5.15 0) (layer F.CrtYd) (width 0.05))
@@ -3175,7 +3182,7 @@
     (fp_text reference U302 (at 0 -6.2) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value VID66-08 (at 0 6.1) (layer F.Fab)
+    (fp_text value VID66-08 (at 0 6.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 4.05 5.45) (end -4.05 5.45) (layer F.CrtYd) (width 0.05))
@@ -3242,7 +3249,7 @@
     (fp_text reference U501 (at 0 -4.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value AMS1117-5.0 (at 0 4.5) (layer F.Fab)
+    (fp_text value AMS1117-5.0 (at 0 4.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.85 -3.35) (end 1.85 3.35) (layer F.Fab) (width 0.1))
@@ -3285,7 +3292,7 @@
     (fp_text reference U502 (at 0 -4.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value AMS1117-3.3 (at 0 4.5) (layer F.Fab)
+    (fp_text value AMS1117-3.3 (at 0 4.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.85 -3.35) (end 1.85 3.35) (layer F.Fab) (width 0.1))
@@ -3328,7 +3335,7 @@
     (fp_text reference U601 (at -10.61 8.43 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ESP32-WROOM-32D (at 0 11.5) (layer F.Fab)
+    (fp_text value ESP32-WROOM-32D (at 0 11.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -9.12 -9.445) (end -9.5 -9.445) (layer F.SilkS) (width 0.12))
@@ -3475,7 +3482,7 @@
     (fp_text reference J601 (at 0.635 4.242) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Conn_02x03_Odd_Even (at 0.635 4.235) (layer F.Fab)
+    (fp_text value Conn_02x03_Odd_Even (at 0.635 4.235) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 2.85 -1.15) (end -1.6 -1.15) (layer F.CrtYd) (width 0.05))
@@ -3522,6 +3529,79 @@
     )
   )
 
+  (dimension 64 (width 0.12) (layer Dwgs.User) (tstamp 60268B54)
+    (gr_text "64 mm" (at 150 51.360899) (layer Dwgs.User) (tstamp 60268B55)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (feature1 (pts (xy 118 74) (xy 118 52.044478)))
+    (feature2 (pts (xy 182 74) (xy 182 52.044478)))
+    (crossbar (pts (xy 182 52.630899) (xy 118 52.630899)))
+    (arrow1a (pts (xy 118 52.630899) (xy 119.126504 52.044478)))
+    (arrow1b (pts (xy 118 52.630899) (xy 119.126504 53.21732)))
+    (arrow2a (pts (xy 182 52.630899) (xy 180.873496 52.044478)))
+    (arrow2b (pts (xy 182 52.630899) (xy 180.873496 53.21732)))
+  )
+  (dimension 7 (width 0.12) (layer Dwgs.User)
+    (gr_text "7 mm" (at 95.73 138.5 90) (layer Dwgs.User)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (feature1 (pts (xy 128 142) (xy 96.413579 142)))
+    (feature2 (pts (xy 128 135) (xy 96.413579 135)))
+    (crossbar (pts (xy 97 135) (xy 97 142)))
+    (arrow1a (pts (xy 97 142) (xy 96.413579 140.873496)))
+    (arrow1b (pts (xy 97 142) (xy 97.586421 140.873496)))
+    (arrow2a (pts (xy 97 135) (xy 96.413579 136.126504)))
+    (arrow2b (pts (xy 97 135) (xy 97.586421 136.126504)))
+  )
+  (dimension 61 (width 0.12) (layer Dwgs.User)
+    (gr_text "61 mm" (at 95.73 104.5 90) (layer Dwgs.User)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (feature1 (pts (xy 118 74) (xy 96.413579 74)))
+    (feature2 (pts (xy 118 135) (xy 96.413579 135)))
+    (crossbar (pts (xy 97 135) (xy 97 74)))
+    (arrow1a (pts (xy 97 74) (xy 97.586421 75.126504)))
+    (arrow1b (pts (xy 97 74) (xy 96.413579 75.126504)))
+    (arrow2a (pts (xy 97 135) (xy 97.586421 133.873496)))
+    (arrow2b (pts (xy 97 135) (xy 96.413579 133.873496)))
+  )
+  (gr_line (start 128 135) (end 118 135) (layer Dwgs.User) (width 0.12))
+  (dimension 44 (width 0.12) (layer Dwgs.User)
+    (gr_text "44 mm" (at 150 151.306999) (layer Dwgs.User) (tstamp 60268B86)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (feature1 (pts (xy 172 135) (xy 172 150.62342)))
+    (feature2 (pts (xy 128 135) (xy 128 150.62342)))
+    (crossbar (pts (xy 128 150.036999) (xy 172 150.036999)))
+    (arrow1a (pts (xy 172 150.036999) (xy 170.873496 150.62342)))
+    (arrow1b (pts (xy 172 150.036999) (xy 170.873496 149.450578)))
+    (arrow2a (pts (xy 128 150.036999) (xy 129.126504 150.62342)))
+    (arrow2b (pts (xy 128 150.036999) (xy 129.126504 149.450578)))
+  )
+  (dimension 83.97691 (width 0.12) (layer Dwgs.User)
+    (gr_text "84 mm" (at 89.492039 100 90) (layer Dwgs.User)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (feature1 (pts (xy 128.882007 141.988455) (xy 90.175618 141.988455)))
+    (feature2 (pts (xy 128.882007 58.011545) (xy 90.175618 58.011545)))
+    (crossbar (pts (xy 90.762039 58.011545) (xy 90.762039 141.988455)))
+    (arrow1a (pts (xy 90.762039 141.988455) (xy 90.175618 140.861951)))
+    (arrow1b (pts (xy 90.762039 141.988455) (xy 91.34846 140.861951)))
+    (arrow2a (pts (xy 90.762039 58.011545) (xy 90.175618 59.138049)))
+    (arrow2b (pts (xy 90.762039 58.011545) (xy 91.34846 59.138049)))
+  )
+  (dimension 94 (width 0.12) (layer Dwgs.User)
+    (gr_text "94 mm" (at 150 44.84136) (layer Dwgs.User)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (feature1 (pts (xy 197 100) (xy 197 45.524939)))
+    (feature2 (pts (xy 103 100) (xy 103 45.524939)))
+    (crossbar (pts (xy 103 46.11136) (xy 197 46.11136)))
+    (arrow1a (pts (xy 197 46.11136) (xy 195.873496 46.697781)))
+    (arrow1b (pts (xy 197 46.11136) (xy 195.873496 45.524939)))
+    (arrow2a (pts (xy 103 46.11136) (xy 104.126504 46.697781)))
+    (arrow2b (pts (xy 103 46.11136) (xy 104.126504 45.524939)))
+  )
   (gr_text "24 Clocks" (at 168.796 63.932) (layer B.SilkS) (tstamp 60208721)
     (effects (font (size 2 1.6) (thickness 0.3)) (justify mirror))
   )
@@ -3549,7 +3629,7 @@
   (gr_arc (start 150 100) (end 197 100) (angle -63.3) (layer Edge.Cuts) (width 0.05) (tstamp 60089B35))
   (gr_arc (start 150 100) (end 103 100) (angle 63.3) (layer Edge.Cuts) (width 0.05) (tstamp 60089AD4))
   (gr_arc (start 150 100) (end 197 100) (angle 63.3) (layer Edge.Cuts) (width 0.05) (tstamp 60089AD4))
-  (gr_arc (start 150 100) (end 103 100) (angle -63.3) (layer Edge.Cuts) (width 0.05))
+  (gr_arc (start 150 100) (end 103 100) (angle -63.3) (layer Edge.Cuts) (width 0.05) (tstamp 60268973))
   (gr_line (start 128.882007 58.011545) (end 171.117993 58.011545) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 128.882007 141.988455) (end 171.117993 141.988455) (layer Edge.Cuts) (width 0.05))
 
@@ -4801,8 +4881,8 @@
     (filled_polygon
       (pts
         (xy 190.389451 123.037725) (xy 188.996328 125.324514) (xy 187.473886 127.527305) (xy 185.827161 129.638812) (xy 184.061617 131.652027)
-        (xy 182.589945 133.147) (xy 172.348906 133.147) (xy 172.309839 133.130818) (xy 171.908567 133.051) (xy 171.499433 133.051)
-        (xy 171.098161 133.130818) (xy 171.059094 133.147) (xy 162.043939 133.147) (xy 162.100502 133.04118) (xy 162.136812 132.921482)
+        (xy 182.589945 133.147) (xy 172.953926 133.147) (xy 172.605839 133.002818) (xy 172.204567 132.923) (xy 171.795433 132.923)
+        (xy 171.394161 133.002818) (xy 171.046074 133.147) (xy 162.043939 133.147) (xy 162.100502 133.04118) (xy 162.136812 132.921482)
         (xy 162.149072 132.797) (xy 162.146 132.64525) (xy 161.98725 132.4865) (xy 161.163 132.4865) (xy 161.163 132.5065)
         (xy 160.909 132.5065) (xy 160.909 132.4865) (xy 160.889 132.4865) (xy 160.889 132.2325) (xy 160.909 132.2325)
         (xy 160.909 132.2125) (xy 161.163 132.2125) (xy 161.163 132.2325) (xy 161.98725 132.2325) (xy 162.146 132.07375)
@@ -5601,8 +5681,8 @@
         (xy 158.503 132.107) (xy 158.249 132.107) (xy 158.249 132.087) (xy 156.89975 132.087) (xy 156.741 132.24575)
         (xy 156.737928 132.41) (xy 156.750188 132.534482) (xy 156.786498 132.65418) (xy 156.845463 132.764494) (xy 156.924815 132.861185)
         (xy 157.021506 132.940537) (xy 157.13182 132.999502) (xy 157.251518 133.035812) (xy 157.376 133.048072) (xy 157.657238 133.046862)
-        (xy 157.5571 133.147) (xy 129.168906 133.147) (xy 129.129839 133.130818) (xy 128.728567 133.051) (xy 128.319433 133.051)
-        (xy 127.918161 133.130818) (xy 127.879094 133.147) (xy 117.417711 133.147) (xy 116.676843 132.41) (xy 139.737928 132.41)
+        (xy 157.5571 133.147) (xy 128.953926 133.147) (xy 128.605839 133.002818) (xy 128.204567 132.923) (xy 127.795433 132.923)
+        (xy 127.394161 133.002818) (xy 127.046074 133.147) (xy 117.417711 133.147) (xy 116.676843 132.41) (xy 139.737928 132.41)
         (xy 139.750188 132.534482) (xy 139.786498 132.65418) (xy 139.845463 132.764494) (xy 139.924815 132.861185) (xy 140.021506 132.940537)
         (xy 140.13182 132.999502) (xy 140.251518 133.035812) (xy 140.376 133.048072) (xy 141.09025 133.045) (xy 141.249 132.88625)
         (xy 141.249 132.087) (xy 141.503 132.087) (xy 141.503 132.88625) (xy 141.66175 133.045) (xy 142.376 133.048072)
@@ -6455,11 +6535,11 @@
         (xy 170.61771 125.10229) (xy 170.689993 125.161611) (xy 170.77246 125.205691) (xy 170.861942 125.232835) (xy 170.955 125.242)
         (xy 188.1 125.242) (xy 188.158281 125.238426) (xy 188.249522 125.217959) (xy 188.335017 125.180085) (xy 189.478855 124.532455)
         (xy 188.996328 125.324514) (xy 187.473886 127.527305) (xy 185.827161 129.638812) (xy 184.061617 131.652027) (xy 182.589945 133.147)
-        (xy 172.348906 133.147) (xy 172.309839 133.130818) (xy 171.908567 133.051) (xy 171.499433 133.051) (xy 171.098161 133.130818)
-        (xy 171.059094 133.147) (xy 160.4429 133.147) (xy 160.260264 132.964364) (xy 159.936461 132.748005) (xy 159.57667 132.598975)
+        (xy 172.953926 133.147) (xy 172.605839 133.002818) (xy 172.204567 132.923) (xy 171.795433 132.923) (xy 171.394161 133.002818)
+        (xy 171.046074 133.147) (xy 160.4429 133.147) (xy 160.260264 132.964364) (xy 159.936461 132.748005) (xy 159.57667 132.598975)
         (xy 159.194718 132.523) (xy 158.805282 132.523) (xy 158.42333 132.598975) (xy 158.063539 132.748005) (xy 157.739736 132.964364)
-        (xy 157.5571 133.147) (xy 129.168906 133.147) (xy 129.129839 133.130818) (xy 128.728567 133.051) (xy 128.319433 133.051)
-        (xy 127.918161 133.130818) (xy 127.879094 133.147) (xy 117.417711 133.147) (xy 116.271696 132.006969) (xy 114.485164 130.012348)
+        (xy 157.5571 133.147) (xy 128.953926 133.147) (xy 128.605839 133.002818) (xy 128.204567 132.923) (xy 127.795433 132.923)
+        (xy 127.394161 133.002818) (xy 127.046074 133.147) (xy 117.417711 133.147) (xy 116.271696 132.006969) (xy 114.485164 130.012348)
         (xy 112.816433 127.91822) (xy 111.271001 125.731484) (xy 109.854018 123.459427) (xy 108.570161 121.10955) (xy 107.423712 118.689684)
         (xy 106.418458 116.207831) (xy 105.557737 113.67223) (xy 105.340601 112.886599) (xy 107.580647 112.886599) (xy 107.602636 113.009735)
         (xy 107.648226 113.126215) (xy 107.907128 113.627571) (xy 108.120646 113.696947) (xy 109.189185 113.152499) (xy 108.644737 112.083959)

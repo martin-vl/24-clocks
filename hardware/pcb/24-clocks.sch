@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 7
 Title "24 Clocks"
-Date "2020-12-06"
-Rev "V0.x"
+Date "GITDATE"
+Rev "GITHASH"
 Comp "Martin van Leussen"
 Comment1 ""
 Comment2 ""
