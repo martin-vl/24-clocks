@@ -60,11 +60,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Insert github hash
+    - name: Insert github hash and date
       shell: bash
       run: |
-        sed -i "s/GITHASH/$(echo ${GITHUB_SHA} | cut -c1-8)/" hardware/pcb/24-clocks.kicad_pcb
-
+        sed -i "s/GITHASH/$(echo ${GITHUB_SHA} | cut -c1-8)/" hardware/pcb/24-clocks.kicad_pcb && \
+        sed -i "s/GITDATE/$(date +%d-%m-%Y)/" hardware/pcb/24-clocks.kicad_pcb
 
     - name: Run schematic stuff
       run: |
