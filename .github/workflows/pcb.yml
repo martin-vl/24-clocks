@@ -56,8 +56,6 @@ jobs:
     runs-on: ubuntu-latest
     container: setsoft/kicad_auto:10.4-5.1.6rc
     # needs: [ERC, DRC]
-    env:
-      SHA8: ${GITHUB_SHA::8}
 
     steps:
     - uses: actions/checkout@v2
@@ -65,7 +63,8 @@ jobs:
     - name: Insert github hash
       shell: bash
       run: |
-        sed -i "s/[GITHASH]/$SHA8/" hardware/pcb/24-clocks.kicad_pcb
+        sed -i "s/GITHASH/$(echo ${GITHUB_SHA} | cut -c1-8)/" hardware/pcb/24-clocks.kicad_pcb
+
 
     - name: Run schematic stuff
       run: |
