@@ -63,7 +63,7 @@ jobs:
     - name: Insert github hash
       shell: bash
       run: |
-        githubhash="${{ github.head_ref }}.${{ github.sha }}" && sed -i "s/[GITHASH]/$githubhash/" hardware/pcb/24-clocks.kicad_pcb
+        githubhash="$(git rev-parse --short HEAD)" && sed -i "s/[GITHASH]/$githubhash/" hardware/pcb/24-clocks.kicad_pcb
 
     - name: Run schematic stuff
       run: |
