@@ -99,6 +99,7 @@ outputs:
       - F.Mask
       - B.Mask
       - Edge.Cuts
+      - Dwgs.User
 
   - name: paste_gerber
     comment: Paste gerbers compatible with JLCPCB
