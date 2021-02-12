@@ -456,8 +456,6 @@ Text Label 9100 4800 0    50   ~ 0
 uC-Debug-Rx
 Text Label 9100 4700 0    50   ~ 0
 uC-Debug-Tx
-Text Notes 4800 6900 0    118  ~ 0
-Check caps
 $Comp
 L Connector_Generic:Conn_01x06 J202
 U 1 1 5FD3FEB8
