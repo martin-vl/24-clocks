@@ -59,18 +59,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Insert commit hash
-      uses: jacobtomlinson/gha-find-replace@master
-      with:
-        find: "[GITHASH]"
-        replace: "${{ github.head_ref }}.${{ github.sha }}"
-
-    - name: Insert date
-      uses: jacobtomlinson/gha-find-replace@master
-      with:
-        find: "[dd-mm-yyyy]"
-        replace: "$(date +'%d-%m-%Y')"
     
+    - name: Insert github hash
+      shell: bash
+      run: |
+        githubhash="${{ github.head_ref }}.${{ github.sha }}" && sed -i "s/[GITHASH]/$githubhash/" hardware/pcb/24-clocks.kicad_pcb
+
     - name: Run schematic stuff
       run: |
         cd hardware/pcb && make pcb_main pcba_master pcba_slave
