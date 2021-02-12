@@ -14,47 +14,12 @@ on:
       - 'hardware/pcb/Makefile'
       - '.github/workflows/pcb.yml'
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # ERC:
-  #   runs-on: ubuntu-latest
-  #   container: setsoft/kicad_auto:10.4-5.1.6rc
 
-  #   steps:
-  #   - uses: actions/checkout@v2
-
-  #   - name: Run ERC
-  #     run: |
-  #       cd hardware/pcb && make erc
-
-  #   - name: Retrieve results
-  #     uses: actions/upload-artifact@v1
-  #     with:
-  #       name: ERC_Output
-  #       path: hardware/pcb/Generated
-
-  # DRC:
-  #   runs-on: ubuntu-latest
-  #   container: setsoft/kicad_auto:10.4-5.1.6rc
-  #   needs: ERC
-
-  #   steps:
-  #   - uses: actions/checkout@v2
-
-  #   - name: Run DRC
-  #     run: |
-  #       cd hardware/pcb && make drc
-
-  #   - name: Retrieve results
-  #     uses: actions/upload-artifact@v1
-  #     with:
-  #       name: DRC_Output
-  #       path: hardware/pcb/Generated
-
-  FabSch:
-    name: Schematic fabrication files
+  GenPCB:
+    name: PCB fabrication files
     runs-on: ubuntu-latest
-    container: setsoft/kicad_auto:10.4-5.1.6rc
+    container: setsoft/kicad_auto:latest
     # needs: [ERC, DRC]
 
     steps:
@@ -68,9 +33,9 @@ jobs:
         sed -i "s/GITHASH/$(echo ${GITHUB_SHA} | cut -c1-8)/" hardware/pcb/*.sch && \
         sed -i "s/GITDATE/$(date +%d-%m-%Y)/" hardware/pcb/*.sch
 
-    - name: Run schematic stuff
+    - name: Generate PCB files
       run: |
-        cd hardware/pcb && make drc pcb_main pcba_master pcba_slave
+        cd hardware/pcb && make pcb_main pcba_master pcba_slave
 
     - name: Retrieve results
       uses: actions/upload-artifact@v1

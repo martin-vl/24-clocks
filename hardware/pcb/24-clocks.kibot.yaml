@@ -21,9 +21,9 @@ variants:
 preflight:
   run_erc: false
   update_xml: false
-  run_drc: false
-  check_zone_fills: false
-  ignore_unconnected: true
+  run_drc: true
+  check_zone_fills: true
+  ignore_unconnected: false
 
 global:
   output: '%f%v_%r-%i.%x'
@@ -130,14 +130,17 @@ outputs:
     comment: "PDF for PCB top layer"
     type: pdf_pcb_print
     dir: Doc
-    layers: [ F.Cu, F.SilkS, Edge.Cuts]
+    layers: [ F.Cu, Edge.Cuts]
+    options:
+      monochrome: true
 
   - name: print_pdf_l4
     comment: "PDF for PCB bottom layer"
     type: pdf_pcb_print
     dir: Doc
     layers: [ B.Cu, Edge.Cuts]
-    #options:
+    options:
+      monochrome: true
     #  mirror: true
 
   - name: print_fab
@@ -145,6 +148,8 @@ outputs:
     type: pdf_pcb_print
     dir: Doc
     layers: [ F.Fab, Edge.Cuts, Dwgs.User ]
+    options:
+      monochrome: true
 
   - name: board_top
     comment: "Top layer view"
