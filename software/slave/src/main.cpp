@@ -1,24 +1,37 @@
+/********************************************************/
+/* 24 Clocks - Slave                                    */
+/*------------------------------------------------------*/
+/* Author:  Martin van Leussen                          */
+/* Date:    2022-08-20                                  */
+/********************************************************/
+
 #include <Arduino.h>
 #include <AccelStepper.h>
+#include <pinout.h>
+#include <EEPROM.h>
 
+// Define com inferfaces
+HardwareSerial Serial485(pin485Rx, pin485Tx);
+HardwareSerial SerialDebug(pinDebugRx, pinDebugTx);
 
+// Define steppers
+AccelStepper stepperBig(AccelStepper::FULL2WIRE, pinMotACw, pinMotAStep);
+AccelStepper stepperSmall(AccelStepper::FULL2WIRE, pinMotBCw, pinMotBStep);
 
-HardwareSerial Serial485(PA10, PA9);
-
-// Define some steppers and the pins the will use
-AccelStepper stepperBig(AccelStepper::FULL2WIRE, PB6, PB7);
-AccelStepper stepperSmall(AccelStepper::FULL2WIRE, PB14, PA15);
-
-// state machine
+// State machine
 enum states{start, getID, idle, moveStart, move, moveEnd};
 states currentState = start;
 
+// 485 buffer
 int bufferData485[50];
 unsigned int currentChar485 = 0;
 bool newData485 = false;
 
 int nextDestSmall = 0;
 int nextDestBig = 0;
+
+#define memClockId  0x01
+int clockId = 0;
 
 void serialEvent485() {
     while (Serial485.available()) {
@@ -37,8 +50,24 @@ void serialEvent485() {
 
 void setup()
 {  
+    SerialDebug.begin(9600);
+    SerialDebug.println("Start slave ...\n");
+    
+    // Get clock id
+    //EEPROM.write(memClockId,0x01);    // set clock id once
+    clockId = EEPROM.read(memClockId);
+    SerialDebug.print("Clock id : ");
+    SerialDebug.println(clockId);
+
+    // enable read 485
+    pinMode(pin485De,OUTPUT);
+    digitalWrite(pin485De,LOW);
+    
     Serial485.begin(9600);
-    Serial485.println("Start slave ...\n");
+    
+    // motor init
+    pinMode(pinMotRst,OUTPUT);
+    digitalWrite(pinMotRst,HIGH);
 
     stepperSmall.setMaxSpeed(5000.0);
     stepperSmall.setAcceleration(5000.0);
@@ -51,31 +80,31 @@ void loop()
 {
     switch(currentState) {
         case start:
-            Serial485.println(" - State: Start");
+            //SerialDebug.println(" - State: Start");
             currentState = idle;
             break;
         case idle:
-            //Serial485.println(" - State: Idle");
+            //SerialDebug.println(" - State: Idle");
             if(newData485) {
-                nextDestSmall = bufferData485[currentChar485-2];
-                nextDestBig = bufferData485[currentChar485-3];
-                Serial485.print("New dest: Small ");
-                Serial485.print(nextDestSmall);
-                Serial485.print(" Big ");
-                Serial485.print(nextDestBig);
+                nextDestSmall = bufferData485[currentChar485+1-clockId*2];
+                nextDestBig = bufferData485[currentChar485-clockId*2];
+                SerialDebug.print("New dest: Small ");
+                SerialDebug.print(nextDestSmall);
+                SerialDebug.print(" Big ");
+                SerialDebug.println(nextDestBig);
                 currentChar485 = 0;
                 newData485 = false;
                 currentState = moveStart;
             }
             break;
         case moveStart:
-            //Serial485.println(" - State: moveStart");
-            stepperSmall.moveTo(nextDestSmall*100);
-            stepperBig.moveTo(nextDestBig*100);
+            //SerialDebug.println(" - State: moveStart");
+            stepperSmall.moveTo(nextDestSmall*72);  // 4320 steps 240 max char *4
+            stepperBig.moveTo(nextDestBig*72);      //
             currentState = move;
             break;
         case move:
-            //Serial485.println(" - State: Move");
+            //SerialDebug.println(" - State: Move");
             // nothing
             
             if ((stepperSmall.distanceToGo() == 0) && (stepperSmall.distanceToGo() == 0)) {
@@ -83,11 +112,11 @@ void loop()
             }
             break;
         case moveEnd:
-            //Serial485.println(" - State: moveEnd");
+            //SerialDebug.println(" - State: moveEnd");
             currentState = idle;
             break;
         default:
-            Serial485.println(" - State: Error");
+            SerialDebug.println(" - State: Error");
             currentState = start;
 
     }
